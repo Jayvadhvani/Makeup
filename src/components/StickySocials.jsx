@@ -1,13 +1,40 @@
-import { useState } from 'react';
+
+import { useState, useEffect } from 'react';
 import '../socials.css';
 
 export default function StickySocials() {
-    const [isOpen, setIsOpen] = useState(true);
+    // On mobile: start closed. On desktop: start open.
+    const [isOpen, setIsOpen] = useState(window.innerWidth >= 768);
+    const [peeked, setPeeked] = useState(false);
+
+    useEffect(() => {
+        // Only run the peek animation on small screens
+        if (window.innerWidth >= 768) return;
+
+        // After 5 seconds, peek open briefly, then close again
+        const peekOpen = setTimeout(() => {
+            setIsOpen(true);
+            setPeeked(true);
+        }, 5000);
+
+        return () => clearTimeout(peekOpen);
+    }, []);
+
+    useEffect(() => {
+        // If it peeked open, close it again after 2.5 seconds
+        if (!peeked) return;
+        const peekClose = setTimeout(() => {
+            setIsOpen(false);
+            setPeeked(false);
+        }, 2500);
+
+        return () => clearTimeout(peekClose);
+    }, [peeked]);
 
     return (
         <div className={'sticky-socials ' + (isOpen ? 'open' : 'closed')}>
-            <button 
-                className="toggle-btn" 
+            <button
+                className="toggle-btn"
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Toggle Social Links"
             >
@@ -16,7 +43,7 @@ export default function StickySocials() {
             <div className="social-icons">
                 <a href="https://wa.me/919839550961" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="social-link">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                        <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.122.553 4.195 1.605 6.012L.15 23.518l5.62-1.474A11.96 11.96 0 0012.03 24c6.645 0 12.03-5.385 12.03-12.031C24.06 5.385 18.675 0 12.031 0zm0 22.016a9.96 9.96 0 01-5.086-1.39l-.364-.216-3.774.99.99-3.682-.236-.376a9.982 9.982 0 01-1.528-5.342C2.032 6.505 6.536 2 12.03 2c5.495 0 9.998 4.505 9.998 10 0 5.495-4.503 10.016-9.997 10.016zM17.52 14.5c-.302-.15-1.782-.88-2.057-.98-.276-.101-.478-.15-.679.15-.202.301-.78 .98-.956 1.18-.176.202-.352.227-.654.076-1.428-.716-2.584-1.554-3.551-3.238-.176-.301.196-.282.634-.863.076-.1.038-.188 0-.263-.038-.076-.679-1.635-.93-2.24-.244-.59-.493-.51-.679-.52-.175-.01-.376-.01-.577-.01-.201 0-.528.075-.804.376-.276.301-1.055 1.03-1.055 2.51 0 1.48 1.08 2.91 1.23 3.11.15.2 2.12 3.238 5.138 4.542 2.01.87 2.656.762 3.159.64.606-.145 1.782-.728 2.033-1.43.25-.702.25-1.305.175-1.43-.075-.126-.276-.201-.577-.35z"/>
+                        <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.122.553 4.195 1.605 6.012L.15 23.518l5.62-1.474A11.96 11.96 0 0012.03 24c6.645 0 12.03-5.385 12.03-12.031C24.06 5.385 18.675 0 12.031 0zm0 22.016a9.96 9.96 0 01-5.086-1.39l-.364-.216-3.774.99.99-3.682-.236-.376a9.982 9.982 0 01-1.528-5.342C2.032 6.505 6.536 2 12.03 2c5.495 0 9.998 4.505 9.998 10 0 5.495-4.503 10.016-9.997 10.016zM17.52 14.5c-.302-.15-1.782-.88-2.057-.98-.276-.101-.478-.15-.679.15-.202.301-.78.98-.956 1.18-.176.202-.352.227-.654.076-1.428-.716-2.584-1.554-3.551-3.238-.176-.301.196-.282.634-.863.076-.1.038-.188 0-.263-.038-.076-.679-1.635-.93-2.24-.244-.59-.493-.51-.679-.52-.175-.01-.376-.01-.577-.01-.201 0-.528.075-.804.376-.276.301-1.055 1.03-1.055 2.51 0 1.48 1.08 2.91 1.23 3.11.15.2 2.12 3.238 5.138 4.542 2.01.87 2.656.762 3.159.64.606-.145 1.782-.728 2.033-1.43.25-.702.25-1.305.175-1.43-.075-.126-.276-.201-.577-.35z"/>
                     </svg>
                 </a>
                 <a href="https://www.instagram.com/goldcrownstudio/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="social-link">
