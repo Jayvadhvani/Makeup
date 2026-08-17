@@ -230,8 +230,8 @@ img, svg {
 /* ─── Logo ───────────────────────────────────── */
 .logo-img {
     width: auto;
-    max-width: 220px;
-    height: 56px;
+    max-width: 260px;
+    height: auto;
     object-fit: contain;
     display: block;
 }
@@ -672,10 +672,10 @@ img, svg {
     }
     .menu-btn    { display: flex; }
 
-    /* Logo — never stretch on mobile */
+    /* Logo — full size on mobile */
     .logo-img {
-        max-width: 160px;
-        height: 44px;
+        max-width: 200px;
+        height: auto;
     }
 
     /* Header padding */
@@ -743,8 +743,8 @@ img, svg {
 /* ─── Small mobile (max 480px) ───────────────── */
 @media (max-width: 480px) {
     .logo-img {
-        max-width: 140px;
-        height: 40px;
+        max-width: 170px;
+        height: auto;
     }
 
     .heading-display { font-size: clamp(2.4rem, 10vw, 3.5rem); }
