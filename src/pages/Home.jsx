@@ -16,9 +16,7 @@ export default function Home() {
     const [reviewIndex, setReviewIndex] = useState(0);
 
     const heroImages = [
-        import.meta.env.BASE_URL + 'assets/images/gold-crown-studio-banner1.png',
-        import.meta.env.BASE_URL + 'assets/images/bridal/bridal-02.svg',
-        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-03.svg'
+        import.meta.env.BASE_URL + 'assets/images/banner1.jpg'
     ];
     const [heroIndex, setHeroIndex] = useState(0);
 
