@@ -799,7 +799,8 @@ img, svg {
 /* ─── Small mobile (max 480px) ───────────────── */
 @media (max-width: 480px) {
     .logo-img {
-        max-width: 170px;
+        width: 100%;
+        max-width: 100%;
         height: auto;
     }
 
