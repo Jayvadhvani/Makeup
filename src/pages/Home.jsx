@@ -73,8 +73,8 @@ export default function Home() {
                 </div>
                 
                 {/* Navigation Arrows (Outside hero-bg for z-index) */}
-                <button onClick={prevHeroSlide} aria-label="Previous Image" style={{ position: 'absolute', right: '50%', top: '50%', transform: 'translate(50%, -50%)', background: 'rgba(255, 255, 255, 0.2)', backdropFilter: 'blur(4px)', color: 'white', border: '1px solid rgba(255,255,255,0.5)', width: '45px', height: '45px', borderRadius: '50%', cursor: 'pointer', zIndex: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', transition: 'background 0.3s' }} onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.4)'} onMouseOut={e => e.currentTarget.style.background = 'rgba(255,255,255,0.2)'}>&#10094;</button>
-                <button onClick={nextHeroSlide} aria-label="Next Image" style={{ position: 'absolute', right: '20px', top: '50%', transform: 'translateY(-50%)', background: 'rgba(255, 255, 255, 0.2)', backdropFilter: 'blur(4px)', color: 'white', border: '1px solid rgba(255,255,255,0.5)', width: '45px', height: '45px', borderRadius: '50%', cursor: 'pointer', zIndex: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', transition: 'background 0.3s' }} onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.4)'} onMouseOut={e => e.currentTarget.style.background = 'rgba(255,255,255,0.2)'}>&#10095;</button>
+                <button onClick={prevHeroSlide} aria-label="Previous Image" className="hero-arrow hero-arrow-left">&#10094;</button>
+                <button onClick={nextHeroSlide} aria-label="Next Image" className="hero-arrow hero-arrow-right">&#10095;</button>
 
                 <div className="hero-content">
                     <FadeUp>

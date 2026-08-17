@@ -462,11 +462,13 @@ img, svg {
     }
     .hero-bg {
         width: 100%;
-        opacity: 0.3;
+        opacity: 0.15;
     }
     .hero-content {
         width: 100%;
-        background: none;
+        background: rgba(250,248,245, 0.7);
+        padding: 3rem 1.5rem;
+        border-radius: 8px;
     }
     .grid-3 {
         grid-template-columns: repeat(2, 1fr);
@@ -537,5 +539,61 @@ img, svg {
         right: 20px;
         padding: 0 16px;
         font-size: 0.8rem;
+    }
+}
+
+/* Hero Slider Arrows */
+.hero-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.5);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+.hero-arrow:hover {
+    background: rgba(255,255,255,0.4);
+}
+
+.hero-arrow-left {
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.hero-arrow-right {
+    right: 20px;
+}
+
+@media (max-width: 1024px) {
+    .hero-arrow-left {
+        right: 80px; 
+    }
+    .hero-arrow-right {
+        right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-arrow {
+        top: auto;
+        bottom: 120px;
+        transform: none;
+        background: rgba(107, 42, 54, 0.8);
+        border-color: rgba(107, 42, 54, 1);
+    }
+    .hero-arrow-left {
+        right: 80px;
     }
 }
