@@ -16,9 +16,9 @@ export default function Home() {
     const [reviewIndex, setReviewIndex] = useState(0);
 
     const heroImages = [
-        '/assets/images/gold-crown-studio-banner1.png',
-        '/assets/images/bridal/bridal-02.svg',
-        '/assets/images/gallery/gallery-03.svg'
+        import.meta.env.BASE_URL + 'assets/images/gold-crown-studio-banner1.png',
+        import.meta.env.BASE_URL + 'assets/images/bridal/bridal-02.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-03.svg'
     ];
     const [heroIndex, setHeroIndex] = useState(0);
 
@@ -96,7 +96,7 @@ export default function Home() {
                 <div className="container editorial-grid">
                     <FadeUp>
                         <div className="img-wrapper img-portrait border-delicate">
-                            <img src="/assets/images/sunita-gupta.jpg" alt="Sunita Gupta" />
+                            <img src={import.meta.env.BASE_URL + 'assets/images/sunita-gupta.jpg'} alt="Sunita Gupta" />
                         </div>
                     </FadeUp>
                     <div style={{ padding: '10%' }}>
@@ -127,9 +127,9 @@ export default function Home() {
                     
                     <div className="grid-3">
                         {[
-                            { title: 'Bridal Makeup', img: '/assets/images/services/service-01.svg', link: '/bridal' },
-                            { title: 'Party & Occasion', img: '/assets/images/services/service-02.svg', link: '/services' },
-                            { title: 'Makeup Academy', img: '/assets/images/services/service-03.svg', link: '/academy' }
+                            { title: 'Bridal Makeup', img: import.meta.env.BASE_URL + 'assets/images/services/service-01.svg', link: '/bridal' },
+                            { title: 'Party & Occasion', img: import.meta.env.BASE_URL + 'assets/images/services/service-02.svg', link: '/services' },
+                            { title: 'Makeup Academy', img: import.meta.env.BASE_URL + 'assets/images/services/service-03.svg', link: '/academy' }
                         ].map((s, i) => (
                             <FadeUp key={i} delay={i * 150}>
                                 <div className="service-block">
@@ -165,10 +165,10 @@ export default function Home() {
                             </div>
                             <div className="grid-2">
                                 <div className="img-wrapper img-portrait" style={{ marginTop: '4rem' }}>
-                                    <img src="/assets/images/gallery/gallery-01.svg" alt="Portfolio 1" />
+                                    <img src={import.meta.env.BASE_URL + 'assets/images/gallery/gallery-01.svg'} alt="Portfolio 1" />
                                 </div>
                                 <div className="img-wrapper img-portrait">
-                                    <img src="/assets/images/gallery/gallery-02.svg" alt="Portfolio 2" />
+                                    <img src={import.meta.env.BASE_URL + 'assets/images/gallery/gallery-02.svg'} alt="Portfolio 2" />
                                 </div>
                             </div>
                         </div>

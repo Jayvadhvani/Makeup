@@ -4,9 +4,9 @@ import SEO from '../components/SEO';
 
 export default function About() {
     const studioImages = [
-        '/assets/images/gallery/gallery-10.svg',
-        '/assets/images/gallery/gallery-11.svg',
-        '/assets/images/gallery/gallery-12.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-10.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-11.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-12.svg',
     ];
 
     return (
@@ -30,7 +30,7 @@ export default function About() {
                     <div className="editorial-grid">
                         <FadeUp delay={100}>
                             <div className="img-wrapper border-delicate" style={{ height: '600px' }}>
-                                <img src="/assets/images/sunita-gupta.jpg" alt="Sunita Gupta - Lead Makeup Artist" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                <img src={import.meta.env.BASE_URL + 'assets/images/sunita-gupta.jpg'} alt="Sunita Gupta - Lead Makeup Artist" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             </div>
                         </FadeUp>
                         <div style={{ padding: '0 5%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -43,7 +43,7 @@ export default function About() {
                                 <p className="text-secondary" style={{ marginBottom: '1.5rem', lineHeight: '1.8' }}>
                                     Certified by prestigious international academies, Sunita brings global techniques to Kanpur. From high-profile fashion editorials to over a thousand stunning bridal transformations, her work is celebrated for its elegance, longevity, and flawless finish.
                                 </p>
-                                <img src="/assets/images/logo.png" alt="Signature" style={{ height: '40px', marginTop: '1rem', opacity: 0.6 }} />
+                                <img src={import.meta.env.BASE_URL + 'assets/images/logo.png'} alt="Signature" style={{ height: '40px', marginTop: '1rem', opacity: 0.6 }} />
                             </FadeUp>
                         </div>
                     </div>

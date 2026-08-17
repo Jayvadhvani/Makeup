@@ -6,25 +6,25 @@ import SEO from '../components/SEO';
 export default function Portfolio() {
     // Top highlighted images for the slider
     const featuredImages = [
-        '/assets/images/gallery/gallery-01.svg',
-        '/assets/images/gallery/gallery-02.svg',
-        '/assets/images/gallery/gallery-03.svg',
-        '/assets/images/gallery/gallery-04.svg',
-        '/assets/images/gallery/gallery-05.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-01.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-02.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-03.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-04.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-05.svg',
     ];
 
     // The rest of the gallery images for the masonry layout
     const masonryImages = [
-        '/assets/images/gallery/gallery-06.svg',
-        '/assets/images/gallery/gallery-07.svg',
-        '/assets/images/gallery/gallery-08.svg',
-        '/assets/images/gallery/gallery-09.svg',
-        '/assets/images/gallery/gallery-10.svg',
-        '/assets/images/gallery/gallery-11.svg',
-        '/assets/images/gallery/gallery-12.svg',
-        '/assets/images/gallery/gallery-13.svg',
-        '/assets/images/gallery/gallery-14.svg',
-        '/assets/images/gallery/gallery-15.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-06.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-07.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-08.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-09.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-10.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-11.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-12.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-13.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-14.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-15.svg',
     ];
 
     const [currentSlide, setCurrentSlide] = useState(0);

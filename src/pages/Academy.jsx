@@ -25,10 +25,10 @@ export default function Academy() {
     ];
 
     const studentWork = [
-        '/assets/images/gallery/gallery-01.svg',
-        '/assets/images/gallery/gallery-02.svg',
-        '/assets/images/gallery/gallery-03.svg',
-        '/assets/images/gallery/gallery-04.svg'
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-01.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-02.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-03.svg',
+        import.meta.env.BASE_URL + 'assets/images/gallery/gallery-04.svg'
     ];
 
     return (
@@ -51,7 +51,7 @@ export default function Academy() {
                     <div className="editorial-grid">
                         <FadeUp delay={100}>
                             <div className="img-wrapper img-landscape border-delicate">
-                                <img src="/assets/images/services/service-04.svg" alt="Makeup Academy Masterclass" />
+                                <img src={import.meta.env.BASE_URL + 'assets/images/services/service-04.svg'} alt="Makeup Academy Masterclass" />
                             </div>
                         </FadeUp>
                         <div style={{ padding: '0 5%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>

@@ -4,12 +4,12 @@ import SEO from '../components/SEO';
 
 export default function Bridal() {
     const galleryImages = [
-        '/assets/images/bridal/bridal-01.svg',
-        '/assets/images/bridal/bridal-02.svg',
-        '/assets/images/bridal/bridal-03.svg',
-        '/assets/images/bridal/bridal-04.svg',
-        '/assets/images/bridal/bridal-05.svg',
-        '/assets/images/bridal/bridal-06.svg',
+        import.meta.env.BASE_URL + 'assets/images/bridal/bridal-01.svg',
+        import.meta.env.BASE_URL + 'assets/images/bridal/bridal-02.svg',
+        import.meta.env.BASE_URL + 'assets/images/bridal/bridal-03.svg',
+        import.meta.env.BASE_URL + 'assets/images/bridal/bridal-04.svg',
+        import.meta.env.BASE_URL + 'assets/images/bridal/bridal-05.svg',
+        import.meta.env.BASE_URL + 'assets/images/bridal/bridal-06.svg',
     ];
 
     return (
@@ -32,7 +32,7 @@ export default function Bridal() {
                     <div className="editorial-grid">
                         <FadeUp delay={100}>
                             <div className="img-wrapper img-portrait border-delicate">
-                                <img src="/assets/images/services/service-01.svg" alt="Bridal Consultation" />
+                                <img src={import.meta.env.BASE_URL + 'assets/images/services/service-01.svg'} alt="Bridal Consultation" />
                             </div>
                         </FadeUp>
                         <div style={{ padding: '0 5%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -52,7 +52,7 @@ export default function Bridal() {
                     <div className="editorial-grid reverse" style={{ marginTop: '8rem' }}>
                         <FadeUp delay={100}>
                             <div className="img-wrapper img-portrait border-delicate">
-                                <img src="/assets/images/portfolio/port-07.svg" alt="HD & Airbrush Makeup" />
+                                <img src={import.meta.env.BASE_URL + 'assets/images/portfolio/port-07.svg'} alt="HD & Airbrush Makeup" />
                             </div>
                         </FadeUp>
                         <div style={{ padding: '0 5%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>

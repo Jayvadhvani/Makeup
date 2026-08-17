@@ -18,7 +18,7 @@ export default function Header() {
         <header className="header" style={{ padding: scrolled ? '1rem 3rem' : '1.5rem 3rem', boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.03)' : 'none' }}>
             <div className="header-content">
                 <Link to="/" className="logo-link">
-                    <img src="/assets/images/logo.png" alt="Gold Crown Makeup Studio" className="logo-img" />
+                    <img src={import.meta.env.BASE_URL + 'assets/images/logo.png'} alt="Gold Crown Makeup Studio" className="logo-img" />
                 </Link>
                 <nav className="nav-desktop">
                     <Link to="/" className={isActive('/')}>Home</Link>

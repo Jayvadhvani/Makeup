@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="container footer-main">
                 <div>
                     <div style={{ marginBottom: '1.5rem' }}>
-                        <img src="/assets/images/logo.png" alt="Gold Crown Makeup Studio" className="logo-img" style={{ maxWidth: '240px' }} />
+                        <img src={import.meta.env.BASE_URL + 'assets/images/logo.png'} alt="Gold Crown Makeup Studio" className="logo-img" style={{ maxWidth: '240px' }} />
                     </div>
                     <p className="text-secondary" style={{ maxWidth: '300px', marginBottom: '2rem' }}>
                         Professional makeup artistry for brides, celebrations, and aspiring makeup artists in Kanpur.

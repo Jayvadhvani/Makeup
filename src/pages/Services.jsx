@@ -10,7 +10,7 @@ export default function Services() {
             subtitle: 'Your Perfect Day, Perfected',
             description: 'At Gold Crown Makeup Studio, we specialize in luxury bridal transformations. Led by Sunita Gupta, our team crafts bespoke looks that honor traditional Indian aesthetics while incorporating modern, flawless techniques. From intricate Haldi and Mehndi styling to the ultimate luxury Wedding Day glam, we ensure you look radiant, photograph beautifully, and feel utterly confident.',
             features: ['HD & Airbrush Makeup', 'Custom Hair Styling & Draping', 'Premium International Products', 'On-Venue Services Available'],
-            img: '/assets/images/services/service-01.svg',
+            img: import.meta.env.BASE_URL + 'assets/images/services/service-01.svg',
             link: '/bridal',
             linkText: 'View Bridal Portfolio'
         },
@@ -20,7 +20,7 @@ export default function Services() {
             subtitle: 'Elegance for Every Event',
             description: "Whether you are attending a glamorous reception, a sophisticated cocktail party, or a vibrant family celebration, our party makeup services are designed to make you stand out. We focus on enhancing your natural features with long-lasting, luminous makeup that complements your outfit and the event's ambiance.",
             features: ['Reception & Engagement Looks', 'Subtle Glam & Dewy Finishes', 'Advanced Hairstyling', 'Group Bookings Available'],
-            img: '/assets/images/services/service-02.svg',
+            img: import.meta.env.BASE_URL + 'assets/images/services/service-02.svg',
             link: '/contact',
             linkText: 'Book an Appointment'
         },
@@ -30,7 +30,7 @@ export default function Services() {
             subtitle: 'The Journey to Radiance',
             description: 'True beauty starts with healthy, glowing skin. Our comprehensive pre-bridal packages include customized skincare, haircare, and deep-nourishing beauty treatments designed to prep your canvas weeks before the big day. Experience luxury facials, spa treatments, and professional consultations to ensure a flawless glow from within.',
             features: ['Customized Skin Treatments', 'Hair Spa & Conditioning', 'Body Polishing', 'Personalized Consultation'],
-            img: '/assets/images/services/service-03.svg',
+            img: import.meta.env.BASE_URL + 'assets/images/services/service-03.svg',
             link: '/contact',
             linkText: 'Inquire About Packages'
         },
@@ -40,7 +40,7 @@ export default function Services() {
             subtitle: 'Learn from the Masters',
             description: 'Step into the world of professional beauty. The Gold Crown Makeup Academy offers intensive, hands-on certification courses led by Sunita Gupta. Designed for aspiring artists, our curriculum covers everything from basic color theory to advanced bridal and editorial techniques, equipping you with the skills to launch a successful career in makeup artistry.',
             features: ['Beginner to Advanced Levels', 'Hands-on Practical Sessions', 'Business & Client Management', 'Professional Certification'],
-            img: '/assets/images/services/service-04.svg',
+            img: import.meta.env.BASE_URL + 'assets/images/services/service-04.svg',
             link: '/academy',
             linkText: 'Explore the Academy'
         }
