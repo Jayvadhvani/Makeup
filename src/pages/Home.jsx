@@ -51,41 +51,51 @@ export default function Home() {
                 keywords="Makeup Studio Kanpur, Best Bridal Makeup Kanpur, Sunita Gupta Makeup Artist, Makeup Academy Kanpur, Party Makeup" 
             />
             {/* HERO */}
-            <section className="hero-editorial container">
-                <div className="hero-bg" style={{ overflow: 'hidden' }}>
+            <section className="hero-editorial">
+                {/* Full-screen background slider */}
+                <div className="hero-bg">
                     {heroImages.map((img, index) => (
-                        <img 
+                        <img
                             key={'hero-' + index}
-                            src={img} 
-                            alt={'Luxury Bridal Makeup ' + (index + 1)} 
-                            style={{ 
-                                position: 'absolute', 
-                                top: 0, 
-                                left: 0, 
-                                width: '100%', 
-                                height: '100%', 
+                            src={img}
+                            alt={'Luxury Bridal Makeup ' + (index + 1)}
+                            style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                width: '100%',
+                                height: '100%',
                                 objectFit: 'cover',
                                 opacity: index === heroIndex ? 1 : 0,
                                 transition: 'opacity 1.5s ease-in-out'
-                            }} 
+                            }}
                         />
                     ))}
+                    <div className="hero-overlay"></div>
                 </div>
-                
-                {/* Navigation Arrows (Outside hero-bg for z-index) */}
+
+                {/* Left Arrow - extreme left center */}
                 <button onClick={prevHeroSlide} aria-label="Previous Image" className="hero-arrow hero-arrow-left">&#10094;</button>
+                {/* Right Arrow - extreme right center */}
                 <button onClick={nextHeroSlide} aria-label="Next Image" className="hero-arrow hero-arrow-right">&#10095;</button>
 
-                <div className="hero-content">
+                {/* Dot indicators */}
+                <div className="hero-dots">
+                    {heroImages.map((_, i) => (
+                        <button key={i} onClick={() => setHeroIndex(i)} className={'hero-dot' + (i === heroIndex ? ' hero-dot-active' : '')} aria-label={'Slide ' + (i+1)} />
+                    ))}
+                </div>
+
+                <div className="container hero-content">
                     <FadeUp>
                         <div className="hero-meta">Luxury Indian Bridal Makeup</div>
                         <h1 className="heading-display">Elegance in<br/><i className="italic color-burgundy">Every Detail</i></h1>
-                        <p className="text-lead" style={{ margin: '2rem 0 3rem' }}>
+                        <p className="text-lead hero-text-lead" style={{ margin: '2rem 0 3rem' }}>
                             Gold Crown Makeup Studio by Sunita Gupta brings over 15 years of mastery to craft your perfect bridal and occasion look in Kanpur.
                         </p>
                         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                             <Link to="/contact" className="btn-solid">Book Your Bridal Look</Link>
-                            <Link to="/services" className="btn">Explore Services</Link>
+                            <Link to="/services" className="btn btn-glass">Explore Services</Link>
                         </div>
                     </FadeUp>
                 </div>
