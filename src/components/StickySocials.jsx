@@ -3,15 +3,12 @@ import { useState, useEffect } from 'react';
 import '../socials.css';
 
 export default function StickySocials() {
-    // On mobile: start closed. On desktop: start open.
-    const [isOpen, setIsOpen] = useState(window.innerWidth >= 768);
+    // Start closed on all screens
+    const [isOpen, setIsOpen] = useState(false);
     const [peeked, setPeeked] = useState(false);
 
     useEffect(() => {
-        // Only run the peek animation on small screens
-        if (window.innerWidth >= 768) return;
-
-        // After 5 seconds, peek open briefly, then close again
+        // After 5 seconds, peek open briefly on all screens
         const peekOpen = setTimeout(() => {
             setIsOpen(true);
             setPeeked(true);
@@ -21,7 +18,7 @@ export default function StickySocials() {
     }, []);
 
     useEffect(() => {
-        // If it peeked open, close it again after 2.5 seconds
+        // Close again after 2.5 seconds of peeking
         if (!peeked) return;
         const peekClose = setTimeout(() => {
             setIsOpen(false);

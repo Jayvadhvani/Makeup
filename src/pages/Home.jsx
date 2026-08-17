@@ -14,6 +14,15 @@ export default function Home() {
         { name: "Simran Kapoor", text: "I absolutely loved my party makeup! The look was glamorous but still felt like me. The team was warm, professional and very attentive." }
     ];
     const [reviewIndex, setReviewIndex] = useState(0);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const cardsToShow = isMobile ? 1 : 3;
 
     const heroImages = [
         import.meta.env.BASE_URL + 'assets/images/banner1.jpg',
@@ -36,10 +45,10 @@ export default function Home() {
     };
 
     const nextReviews = () => {
-        setReviewIndex((prev) => (prev + 1) % (reviews.length - 2));
+        setReviewIndex((prev) => (prev + 1) % reviews.length);
     };
     const prevReviews = () => {
-        setReviewIndex((prev) => (prev === 0 ? reviews.length - 3 : prev - 1));
+        setReviewIndex((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
     };
 
     return (
@@ -195,37 +204,22 @@ export default function Home() {
                         </div>
                     </FadeUp>
                     
-                    <div style={{ position: 'relative', padding: '0 1rem' }}>
-                        <button onClick={prevReviews} aria-label="Previous Reviews" style={{ position: 'absolute', left: '-20px', top: '50%', transform: 'translateY(-50%)', background: 'var(--accent-primary)', color: 'white', border: 'none', width: '40px', height: '40px', borderRadius: '50%', cursor: 'pointer', zIndex: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }}>&#10094;</button>
-                        
-                        <div style={{
-                            display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                            gap: '2rem',
-                            marginBottom: '3rem',
-                            overflow: 'hidden'
-                        }}>
-                            {reviews.slice(reviewIndex, reviewIndex + 3).map((review, i) => (
-                                <FadeUp key={reviewIndex + '-' + i} delay={i * 100}>
-                                    <div style={{
-                                        backgroundColor: 'var(--bg-white)',
-                                        padding: '2rem',
-                                        border: '1px solid rgba(214, 197, 179, 0.3)',
-                                        height: '100%',
-                                        display: 'flex',
-                                        flexDirection: 'column'
-                                    }}>
-                                        <div style={{ color: 'var(--accent-gold)', fontSize: '1.2rem', marginBottom: '1rem' }}>★★★★★</div>
-                                        <p className="text-secondary" style={{ fontStyle: 'italic', flexGrow: 1, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
-                                            "{review.text}"
-                                        </p>
-                                        <h4 className="text-meta color-burgundy">— {review.name}</h4>
-                                    </div>
-                                </FadeUp>
+                    <div className="testimonials-wrapper">
+                        <button onClick={prevReviews} aria-label="Previous Reviews" className="testimonial-arrow testimonial-arrow-left">&#10094;</button>
+
+                        <div className="testimonials-grid" style={{ gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)' }}>
+                            {reviews.slice(reviewIndex, reviewIndex + cardsToShow).map((review, i) => (
+                                <div key={reviewIndex + '-' + i} className="testimonial-card">
+                                    <div style={{ color: 'var(--accent-gold)', fontSize: '1.2rem', marginBottom: '1rem' }}>★★★★★</div>
+                                    <p className="text-secondary" style={{ fontStyle: 'italic', flexGrow: 1, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
+                                        "{review.text}"
+                                    </p>
+                                    <h4 className="text-meta color-burgundy">— {review.name}</h4>
+                                </div>
                             ))}
                         </div>
-                        
-                        <button onClick={nextReviews} aria-label="Next Reviews" style={{ position: 'absolute', right: '-20px', top: '50%', transform: 'translateY(-50%)', background: 'var(--accent-primary)', color: 'white', border: 'none', width: '40px', height: '40px', borderRadius: '50%', cursor: 'pointer', zIndex: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }}>&#10095;</button>
+
+                        <button onClick={nextReviews} aria-label="Next Reviews" className="testimonial-arrow testimonial-arrow-right">&#10095;</button>
                     </div>
                     
                     <div className="text-center">
