@@ -16,7 +16,8 @@ export default function Home() {
     const [reviewIndex, setReviewIndex] = useState(0);
 
     const heroImages = [
-        import.meta.env.BASE_URL + 'assets/images/banner1.jpg'
+        import.meta.env.BASE_URL + 'assets/images/banner1.jpg',
+        import.meta.env.BASE_URL + 'assets/images/Banner-2.jpg'
     ];
     const [heroIndex, setHeroIndex] = useState(0);
 

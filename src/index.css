@@ -236,7 +236,7 @@ img, svg {
     display: block;
 }
 
-/* ─── Header & Nav ───────────────────────────── */
+/* ─── Header & Nav ────────────────────────────── */
 .header {
     position: fixed;
     top: 0;
@@ -261,6 +261,7 @@ img, svg {
     align-items: center;
     max-width: 1440px;
     margin: 0 auto;
+    gap: 0;
 }
 
 .nav-desktop {
@@ -663,8 +664,12 @@ img, svg {
         --spacing-xl: 4rem;
     }
 
-    /* Nav */
-    .nav-desktop { display: none; }
+    /* Nav — completely removed from layout on mobile */
+    .nav-desktop {
+        display: none !important;
+        width: 0;
+        overflow: hidden;
+    }
     .menu-btn    { display: flex; }
 
     /* Logo — never stretch on mobile */
