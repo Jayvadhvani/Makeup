@@ -307,10 +307,11 @@ img, svg {
     background: none;
     border: none;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     padding: 4px;
     z-index: 210;
+    flex-shrink: 0;
 }
 
 .menu-line {
@@ -723,9 +724,13 @@ img, svg {
     }
     .menu-btn    { display: flex; }
 
-    /* Logo — full size on mobile */
+    /* Logo — 80% of header on mobile */
+    .logo-link {
+        flex: 1;
+    }
     .logo-img {
-        max-width: 200px;
+        width: 100%;
+        max-width: 100%;
         height: auto;
     }
 
