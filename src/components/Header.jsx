@@ -66,7 +66,7 @@ export default function Header() {
                         <Link to="/academy" className={'nav-dropdown ' + isActive('/academy')}>Academy</Link>
                         <Link to="/portfolio" className={isActive('/portfolio')}>Portfolio</Link>
                         <Link to="/blog" className={isActive('/blog')}>Blog</Link>
-                        <Link to="/contact" className="btn-solid nav-book-btn"><span className="nav-book-icon" aria-hidden="true">▦</span> Book Now <span className="nav-book-arrow" aria-hidden="true">→</span></Link>
+                        <Link to="/contact" className="btn-solid nav-book-btn"><span className="nav-book-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M7.5 3v4M16.5 3v4M3.5 9.5h17M8 13h2M14 13h2M8 17h2"/></svg></span> Book Now <span className="nav-book-arrow" aria-hidden="true">→</span></Link>
                     </nav>
 
                     <button
