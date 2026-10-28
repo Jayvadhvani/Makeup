@@ -180,7 +180,7 @@ const articles = [
         readTime: '5 min read',
         title: 'How to Choose a Makeup Academy in Kanpur',
         intro: 'If you are exploring professional makeup training, compare course content, hands-on practice, trainer guidance, and the support offered to students.',
-        image: 'https://images.pexels.com/photos/ maquill/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        image: 'https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=1200',
         imageAlt: 'Beauty products arranged for skincare and makeup learning',
         paragraphs: [
             ['Review the curriculum', 'Ask whether the course covers skin preparation, colour matching, base techniques, eye makeup, hygiene, client consultation, and occasion or bridal looks. Request a clear outline of topics and practical outcomes before enrolling.'],
