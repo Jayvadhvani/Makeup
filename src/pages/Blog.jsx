@@ -105,6 +105,108 @@ const articles = [
             ['Discuss photography plans', 'Tell your artist whether most photos will be outdoors, under warm indoor lights, or on a stage. This context can help them plan a balanced finish.']
         ],
         takeaway: 'Use the time of day as one useful consideration, not a strict rule. The best look is the one that suits your style, outfit, and celebration.'
+    },
+    {
+        id: 'choose-bridal-makeup-artist-kanpur',
+        category: 'Bridal Planning',
+        readTime: '5 min read',
+        title: 'How to Choose a Bridal Makeup Artist in Kanpur',
+        intro: 'Use these practical questions to find a makeup artist whose style, communication, and schedule suit your wedding plans in Kanpur.',
+        image: 'https://images.pexels.com/photos/10954271/pexels-photo-10954271.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        imageAlt: 'Indian bride with traditional bridal jewellery and detailed wedding makeup',
+        paragraphs: [
+            ['Review real bridal work', 'Look for a portfolio that includes complete bridal looks, close-up details, and different styles. Check whether the artist’s work feels consistent and whether the examples match the finish you have in mind. Ask which images represent their own work.'],
+            ['Discuss your date and location', 'When contacting a bridal makeup artist in Kanpur, share your wedding date, venue or getting-ready location, ceremony time, and the number of functions. Confirm availability and ask about travel arrangements if you are getting ready away from the studio.'],
+            ['Ask about the consultation', 'A useful consultation should cover your outfit, jewellery, preferred makeup finish, event lighting, and any product sensitivities. Bring a small collection of reference images and explain what you like about each one.'],
+            ['Clarify the service details', 'Before booking, ask what the quoted service includes, how long the appointment usually takes, what happens if the schedule changes, and whether additional functions or touch-ups can be discussed separately. Confirm all agreed details in writing.'],
+            ['Choose communication and comfort', 'You will spend important preparation time with your artist. Clear answers, realistic expectations, and a willingness to listen are as important as a beautiful portfolio. Avoid choosing on photographs alone without discussing your needs.']
+        ],
+        takeaway: 'The right bridal makeup artist is a good match for your style and event logistics. Compare portfolios, communication, service details, and availability before making your decision.'
+    },
+    {
+        id: 'bridal-makeup-packages-kanpur',
+        category: 'Bridal Planning',
+        readTime: '4 min read',
+        title: 'What to Check Before Booking Bridal Makeup Packages in Kanpur',
+        intro: 'A simple checklist can help you compare bridal makeup services clearly and understand what is included before confirming a date.',
+        image: 'https://images.pexels.com/photos/3764011/pexels-photo-3764011.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        imageAlt: 'Makeup brushes and beauty products arranged for a bridal makeup appointment',
+        paragraphs: [
+            ['List the functions you need', 'Write down whether you need makeup for the wedding ceremony, engagement, reception, or other celebrations. Different dates and start times can affect scheduling, so share the full plan when requesting package details.'],
+            ['Ask what each service includes', 'Confirm whether the service includes makeup only or other agreed elements such as hairstyling, draping, lashes, or touch-up support. Inclusions vary between providers, so request a written breakdown instead of assuming every package is the same.'],
+            ['Confirm travel and timing', 'If the artist needs to travel to a venue or hotel, ask whether travel costs apply and how much preparation time should be reserved. Check the start time, expected duration, and contingency plan for delays.'],
+            ['Discuss products and preferences', 'Share any known sensitivities and ask how the artist will tailor the look to your skin, outfit, and comfort. If you have a preferred finish, explain it during the consultation rather than relying on a package name alone.'],
+            ['Read the booking terms', 'Ask about the advance payment, cancellation or rescheduling terms, and how the date is confirmed. Keep a copy of the final service details and payment record for reference.']
+        ],
+        takeaway: 'When comparing bridal makeup packages in Kanpur, look beyond the headline price. Clear inclusions, timing, travel terms, and communication make it easier to compare options fairly.'
+    },
+    {
+        id: 'engagement-makeup-looks',
+        category: 'Makeup Inspiration',
+        readTime: '4 min read',
+        title: 'Engagement Makeup Ideas for an Elegant, Photo-Ready Look',
+        intro: 'From soft glam to a more defined evening finish, your engagement makeup can complement your outfit without overpowering your personal style.',
+        image: 'https://images.pexels.com/photos/1721937/pexels-photo-1721937.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        imageAlt: 'Elegant makeup styling inspiration for a special occasion',
+        paragraphs: [
+            ['Match the mood of your event', 'A daytime engagement may inspire a fresh, softly defined look, while an evening celebration may suit richer colours or more pronounced eyes. These are starting points rather than rules—choose what feels right for you.'],
+            ['Coordinate with your outfit', 'Consider your outfit colour, neckline, embroidery, and jewellery. Share photographs of these details with your makeup artist so the complete look feels balanced.'],
+            ['Decide what you want to emphasize', 'You might prefer softly defined eyes, a statement lip, luminous skin, or classic glam. Choose one or two priorities and discuss how the rest of the makeup can complement them.'],
+            ['Think about photography and lighting', 'Tell your artist whether your event is indoors or outdoors and when most photographs will be taken. This context helps guide the finish and level of definition.'],
+            ['Plan your appointment in advance', 'Share your event time, getting-ready location, and any outfit changes early. If you are also booking wedding or reception makeup, ask about availability for each date at the same time.']
+        ],
+        takeaway: 'An elegant engagement makeup look starts with your outfit, event, and personal preferences. Bring inspiration, discuss the details, and leave enough time to get ready comfortably.'
+    },
+    {
+        id: 'reception-makeup-guide',
+        category: 'Occasion Makeup',
+        readTime: '4 min read',
+        title: 'Reception Makeup: How to Create a Polished Evening Look',
+        intro: 'A reception look can feel glamorous and refined when makeup, jewellery, outfit, and venue lighting work together.',
+        image: 'https://images.pexels.com/photos/3992656/pexels-photo-3992656.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        imageAlt: 'Professional makeup artist preparing a client for an occasion look',
+        paragraphs: [
+            ['Start with the outfit', 'A heavily embellished outfit may pair well with balanced makeup, while a simpler outfit can leave more room for a statement lip or defined eyes. Consider the full styling rather than deciding on makeup in isolation.'],
+            ['Plan for evening lighting', 'Reception venues often use warm lights, spotlights, and flash photography. Explain the venue and photography plans to your artist so they can recommend a finish that works in context.'],
+            ['Choose a comfortable level of glamour', 'Smoky eyes, a classic liner, a soft shimmer, or a bold lip can all work depending on your preferences. You do not need to follow a trend if it does not feel like you.'],
+            ['Allow time for outfit changes', 'If your reception follows another function, include time to change clothes, adjust jewellery, and travel. Tell your makeup artist if you need a refresh or a different look for the second event.'],
+            ['Keep touch-ups simple', 'Ask which small items are useful for your specific makeup. A planned touch-up approach can be more practical than carrying many products or repeatedly applying layers.']
+        ],
+        takeaway: 'The best reception makeup is coordinated, comfortable, and planned around your evening schedule. Discuss the outfit, venue lighting, and desired finish before the event.'
+    },
+    {
+        id: 'makeup-academy-kanpur-course-checklist',
+        category: 'Makeup Academy',
+        readTime: '5 min read',
+        title: 'How to Choose a Makeup Academy in Kanpur',
+        intro: 'If you are exploring professional makeup training, compare course content, hands-on practice, trainer guidance, and the support offered to students.',
+        image: 'https://images.pexels.com/photos/ maquill/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        imageAlt: 'Beauty products arranged for skincare and makeup learning',
+        paragraphs: [
+            ['Review the curriculum', 'Ask whether the course covers skin preparation, colour matching, base techniques, eye makeup, hygiene, client consultation, and occasion or bridal looks. Request a clear outline of topics and practical outcomes before enrolling.'],
+            ['Look for supervised practice', 'Makeup is a hands-on skill. Find out how much time students spend practising techniques, whether models or practice materials are provided, and how instructors give feedback on completed looks.'],
+            ['Ask about class format and duration', 'Confirm the course schedule, class size, total training hours, materials, and any attendance requirements. Make sure the format fits your current commitments and learning goals.'],
+            ['Understand the kit and extra costs', 'Ask what products and tools are included, what students need to purchase separately, and whether the kit is suitable for continued practice after the course. Get a written list to avoid surprises.'],
+            ['Clarify certificates and career guidance', 'If a certificate is offered, ask what it represents and what requirements apply. You can also ask whether the academy provides portfolio guidance or advice on building client experience; do not assume employment or client bookings are guaranteed.']
+        ],
+        takeaway: 'When comparing makeup academies in Kanpur, choose based on transparent course details, practical training, hygiene standards, and instructor feedback. Contact the academy directly to confirm current batches and fees.'
+    },
+    {
+        id: 'hd-vs-airbrush-bridal-makeup',
+        category: 'Bridal Makeup Tips',
+        readTime: '5 min read',
+        title: 'HD vs Airbrush Bridal Makeup: What Should You Choose?',
+        intro: 'Both HD and airbrush techniques can create beautiful bridal looks. The right option depends on your skin, desired finish, event, and the artist’s assessment.',
+        image: 'https://images.pexels.com/photos/247287/pexels-photo-247287.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        imageAlt: 'Makeup brushes and cosmetics prepared for professional makeup application',
+        paragraphs: [
+            ['Understand the techniques', 'HD makeup generally refers to products and application designed to look refined in high-resolution photography. Airbrush makeup uses a specialised tool to apply a fine mist of product. Exact results depend on the products, preparation, and artist technique.'],
+            ['Consider your skin and preferred finish', 'Think about whether you prefer a natural, dewy, matte, or more perfected finish. Skin texture, dryness, oiliness, and sensitivities all affect how products look and feel, so discuss these with your artist.'],
+            ['Think about the full event', 'Your ceremony duration, climate, outfit, and photography conditions may influence the recommendation. No technique is automatically best for every bride or every situation.'],
+            ['Ask about preparation and touch-ups', 'A suitable skin-preparation routine and correct application matter with either technique. Ask what to expect during the appointment and what touch-up products may be useful for your event.'],
+            ['Choose through consultation', 'Share inspiration photos and explain how you want your makeup to look in person and in photographs. An experienced artist can help you decide which approach is appropriate for your preferences and circumstances.']
+        ],
+        takeaway: 'There is no universal winner between HD and airbrush bridal makeup. Discuss your skin, preferred finish, event conditions, and budget with your makeup artist before deciding.'
     }
 ];
 
