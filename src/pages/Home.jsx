@@ -290,36 +290,41 @@ export default function Home() {
             </div>
 
             {/* PORTFOLIO TEASER */}
-            <section className="section">
-                <div className="container">
+            <section className="signature-gallery-section" aria-labelledby="signature-gallery-title">
+                <div className="container signature-gallery-layout">
                     <FadeUp>
-                        <div className="editorial-grid reverse">
-                            <div style={{ paddingRight: '10%' }}>
-                                <h4 className="text-meta" style={{ marginBottom: '1rem' }}>The Gallery</h4>
-                                <h2 className="heading-xl">Signature <i className="italic">Looks</i></h2>
-                                <p className="text-secondary" style={{ marginBottom: '2.5rem' }}>
-                                    From soft, contemporary glam to rich, traditional Indian bridal aesthetics, view our curated portfolio of real clients.
-                                </p>
-                                <Link to="/portfolio" className="btn">View Portfolio</Link>
-                            </div>
-                            <div className="grid-2">
-                                <div className="img-wrapper img-portrait" style={{ marginTop: '4rem' }}>
-                                    <img
-                                        src="https://images.pexels.com/photos/10954282/pexels-photo-10954282.jpeg?auto=compress&cs=tinysrgb&w=900"
-                                        alt="Indian bride wearing traditional bridal jewelry and detailed wedding makeup"
-                                        loading="lazy"
-                                    />
-                                </div>
-                                <div className="img-wrapper img-portrait">
-                                    <img
-                                        src="https://images.pexels.com/photos/10954271/pexels-photo-10954271.jpeg?auto=compress&cs=tinysrgb&w=900"
-                                        alt="Close-up portrait of an Indian bride with ornate jewelry and vibrant bridal makeup"
-                                        loading="lazy"
-                                    />
-                                </div>
-                            </div>
+                        <div className="signature-gallery-visual" aria-label="Bridal makeup portfolio preview">
+                            <div className="signature-gallery-wash" aria-hidden="true"></div>
+                            <div className="signature-gallery-ornament signature-gallery-ornament-one" aria-hidden="true">✿</div>
+                            <div className="signature-gallery-ornament signature-gallery-ornament-two" aria-hidden="true">❧</div>
+                            <figure className="signature-gallery-photo signature-gallery-photo-main">
+                                <img
+                                    src="https://images.pexels.com/photos/10954282/pexels-photo-10954282.jpeg?auto=compress&cs=tinysrgb&w=900"
+                                    alt="Indian bride wearing traditional bridal jewelry and detailed makeup"
+                                    loading="lazy"
+                                />
+                            </figure>
+                            <figure className="signature-gallery-photo signature-gallery-photo-detail">
+                                <img
+                                    src="https://images.pexels.com/photos/10954271/pexels-photo-10954271.jpeg?auto=compress&cs=tinysrgb&w=900"
+                                    alt="Close-up of bridal makeup, jewelry, and a carefully finished look"
+                                    loading="lazy"
+                                />
+                            </figure>
+                            <span className="signature-gallery-image-note">Beauty in every detail</span>
                         </div>
                     </FadeUp>
+                    <div className="signature-gallery-copy">
+                        <FadeUp delay={140}>
+                            <p className="signature-gallery-eyebrow"><span>The Gallery</span></p>
+                            <h2 id="signature-gallery-title" className="signature-gallery-title">Signature <em>Looks</em></h2>
+                            <div className="signature-gallery-rule" aria-hidden="true"><span /></div>
+                            <p className="signature-gallery-description">
+                                From soft, contemporary glam to rich, traditional Indian bridal artistry, explore a collection of looks created to celebrate every bride’s individuality.
+                            </p>
+                            <Link to="/portfolio" className="signature-gallery-cta">View Portfolio <span aria-hidden="true">⟶</span></Link>
+                        </FadeUp>
+                    </div>
                 </div>
             </section>
 
