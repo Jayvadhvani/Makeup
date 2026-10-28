@@ -82,49 +82,47 @@ export default function Academy() {
             </section>
 
             {/* CURRICULUM */}
-            <section className="section bg-white">
-                <div className="container">
+            <section className="section bg-white academy-curriculum">
+                <div className="container academy-curriculum-container">
                     <FadeUp>
-                        <div className="text-center" style={{ marginBottom: '4rem' }}>
-                            <h4 className="text-meta" style={{ marginBottom: '1rem' }}>Syllabus</h4>
+                        <div className="text-center curriculum-heading">
+                            <div className="curriculum-eyebrow"><span></span><h4 className="text-meta">Syllabus</h4><span></span></div>
                             <h2 className="heading-xl">Course <i className="italic">Curriculum</i></h2>
+                            <div className="curriculum-flourish" aria-hidden="true"><span></span><b>◆</b><span></span></div>
                         </div>
                     </FadeUp>
 
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                        gap: '2.5rem'
-                    }}>
-                        {curriculum.map((course, i) => (
-                            <FadeUp key={i} delay={i * 150}>
-                                <div style={{
-                                    border: '1px solid rgba(214, 197, 179, 0.4)',
-                                    padding: '2.5rem',
-                                    height: '100%',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    backgroundColor: 'var(--bg-primary)'
-                                }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
-                                        <h3 className="heading-md" style={{ fontSize: '1.5rem', maxWidth: '70%' }}>{course.title}</h3>
-                                        <span className="text-meta color-burgundy" style={{ backgroundColor: 'var(--bg-secondary)', padding: '0.4rem 0.8rem', borderRadius: '4px' }}>
-                                            {course.duration}
-                                        </span>
-                                    </div>
-                                    <p className="text-secondary" style={{ marginBottom: '2rem', flexGrow: 1 }}>
-                                        {course.desc}
-                                    </p>
-                                    <ul style={{ listStyle: 'none' }}>
-                                        {course.highlights.map((highlight, j) => (
-                                            <li key={j} style={{ padding: '0.5rem 0', borderTop: '1px solid rgba(214, 197, 179, 0.2)', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                                                {highlight}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </FadeUp>
-                        ))}
+                    <div className="curriculum-grid">
+                        {curriculum.map((course, i) => {
+                            const highlightIcons = [
+                                ['◉', '♧', '◎', '✧'],
+                                ['▣', '❋', '◇', '♕'],
+                                ['♧', '☆', '▣', '♧']
+                            ];
+                            return (
+                                <FadeUp key={i} delay={i * 120}>
+                                    <article className="curriculum-card">
+                                        <div className="curriculum-card-top">
+                                            <div className="curriculum-number"><span>{String(i + 1).padStart(2, '0')}</span><i></i></div>
+                                            <span className="curriculum-duration">
+                                                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="1.5"></rect><path d="M8 3v4M16 3v4M4 10h16M8 14h2M14 14h2"></path></svg>
+                                                {course.duration}
+                                            </span>
+                                        </div>
+                                        <h3 className="curriculum-card-title">{course.title}</h3>
+                                        <p className="curriculum-card-description">{course.desc}</p>
+                                        <ul className="curriculum-highlights">
+                                            {course.highlights.map((highlight, j) => (
+                                                <li key={j}>
+                                                    <span className="curriculum-highlight-icon" aria-hidden="true">{highlightIcons[i][j]}</span>
+                                                    <span>{highlight}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </article>
+                                </FadeUp>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
