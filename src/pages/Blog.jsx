@@ -244,8 +244,12 @@ export default function Blog() {
         <div className="blog-page">
             <SEO
                 title={selectedArticle ? selectedArticle.title : 'Bridal Beauty Journal'}
-                description="Explore bridal makeup planning, pre-wedding skincare, and beauty inspiration from Gold Crown Makeup Studio in Kanpur."
-                keywords="bridal makeup tips Kanpur, Indian bridal makeup, wedding skin preparation, bridal beauty advice, Gold Crown Makeup Studio"
+                description={selectedArticle
+                    ? selectedArticle.title + '. ' + selectedArticle.intro + ' Gold Crown Makeup Studio in Kanpur.'
+                    : 'Explore bridal makeup tips, wedding beauty planning, pre-wedding skincare, engagement and reception makeup, and professional makeup training advice from Gold Crown Makeup Studio in Kanpur.'}
+                keywords={selectedArticle
+                    ? selectedArticle.title.toLowerCase() + ', ' + selectedArticle.category.toLowerCase() + ', bridal makeup Kanpur, Gold Crown Makeup Studio'
+                    : 'bridal makeup artist Kanpur, bridal makeup tips, engagement makeup Kanpur, reception makeup, makeup academy Kanpur, pre-wedding skincare, Gold Crown Makeup Studio'}
             />
             <section className="blog-hero">
                 <div className="container-narrow text-center">
