@@ -172,24 +172,42 @@ export default function Home() {
             </section>
 
             {/* BRAND STORY */}
-            <section className="section bg-white">
-                <div className="container editorial-grid">
+            <section className="brand-story-section">
+                <div className="container brand-story-grid">
                     <FadeUp>
-                        <div className="img-wrapper img-portrait border-delicate">
-                            <img src={import.meta.env.BASE_URL + 'assets/images/sunita-gupta.jpg'} alt="Sunita Gupta" />
+                        <div className="brand-story-portrait">
+                            <div className="brand-story-image-frame">
+                                <img src={import.meta.env.BASE_URL + 'assets/images/sunita-gupta.jpg'} alt="Sunita Gupta, founder of Gold Crown Makeup Studio" loading="lazy" />
+                            </div>
+                            <span className="brand-story-image-caption">Gold Crown Makeup Studio</span>
                         </div>
                     </FadeUp>
-                    <div style={{ padding: '10%' }}>
-                        <FadeUp delay={200}>
-                            <h4 className="text-meta" style={{ marginBottom: '1rem' }}>The Art Behind the Beauty</h4>
-                            <h2 className="heading-lg">Meet Sunita Gupta</h2>
-                            <p className="text-secondary" style={{ marginBottom: '1.5rem' }}>
-                                Every face tells a story. At Gold Crown Makeup Studio, we don't just apply makeup; we enhance your natural grace, ensuring you feel confident and radiantly yourself on your most important days.
-                            </p>
-                            <p className="text-secondary" style={{ marginBottom: '2.5rem' }}>
-                                With personalized consultations and premium techniques, we tailor every brushstroke to your features, outfit, and personal aesthetic.
-                            </p>
-                            <Link to="/about" className="btn">Discover Our Story</Link>
+                    <div className="brand-story-content">
+                        <FadeUp delay={140}>
+                            <p className="text-meta brand-story-eyebrow">The Art Behind the Beauty</p>
+                            <h2 className="brand-story-title">Meet <span>Sunita Gupta</span></h2>
+                            <div className="brand-story-rule" aria-hidden="true"><span /></div>
+                            <p className="brand-story-lead"><strong>Every face tells a story.</strong> At Gold Crown Makeup Studio, we don't just apply makeup; we enhance your natural grace, helping you feel confident and radiantly yourself on your most important days.</p>
+                            <p className="brand-story-description">With personalized consultations and premium techniques, we tailor every brushstroke to your features, outfit, and personal aesthetic.</p>
+                            <div className="brand-story-values" aria-label="Our approach">
+                                <div className="brand-story-value">
+                                    <span className="brand-story-value-icon" aria-hidden="true">◇</span>
+                                    <span>Personalized<br />Consultations</span>
+                                </div>
+                                <div className="brand-story-value">
+                                    <span className="brand-story-value-icon" aria-hidden="true">✧</span>
+                                    <span>Premium<br />Techniques</span>
+                                </div>
+                                <div className="brand-story-value">
+                                    <span className="brand-story-value-icon" aria-hidden="true">♡</span>
+                                    <span>Natural &amp;<br />Radiant Looks</span>
+                                </div>
+                                <div className="brand-story-value">
+                                    <span className="brand-story-value-icon" aria-hidden="true">☆</span>
+                                    <span>Your Special<br />Moments</span>
+                                </div>
+                            </div>
+                            <Link to="/about" className="brand-story-cta">Discover Our Story <span aria-hidden="true">→</span></Link>
                         </FadeUp>
                     </div>
                 </div>
