@@ -10,7 +10,8 @@ export default function Services() {
             subtitle: 'Your Perfect Day, Perfected',
             description: 'At Gold Crown Makeup Studio, we specialize in luxury bridal transformations. Led by Sunita Gupta, our team crafts bespoke looks that honor traditional Indian aesthetics while incorporating modern, flawless techniques. From intricate Haldi and Mehndi styling to the ultimate luxury Wedding Day glam, we ensure you look radiant, photograph beautifully, and feel utterly confident.',
             features: ['HD & Airbrush Makeup', 'Custom Hair Styling & Draping', 'Premium International Products', 'On-Venue Services Available'],
-            img: import.meta.env.BASE_URL + 'assets/images/services/service-01.svg',
+            img: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1400&q=85',
+            imgAlt: 'Professional bridal makeup artist carefully applying makeup for a luxury bridal look',
             link: '/bridal',
             linkText: 'View Bridal Portfolio'
         },
@@ -20,7 +21,8 @@ export default function Services() {
             subtitle: 'Elegance for Every Event',
             description: "Whether you are attending a glamorous reception, a sophisticated cocktail party, or a vibrant family celebration, our party makeup services are designed to make you stand out. We focus on enhancing your natural features with long-lasting, luminous makeup that complements your outfit and the event's ambiance.",
             features: ['Reception & Engagement Looks', 'Subtle Glam & Dewy Finishes', 'Advanced Hairstyling', 'Group Bookings Available'],
-            img: import.meta.env.BASE_URL + 'assets/images/services/service-02.svg',
+            img: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1400&q=85',
+            imgAlt: 'Elegant beauty portrait representing polished party and occasion makeup',
             link: '/contact',
             linkText: 'Book an Appointment'
         },
@@ -30,7 +32,8 @@ export default function Services() {
             subtitle: 'The Journey to Radiance',
             description: 'True beauty starts with healthy, glowing skin. Our comprehensive pre-bridal packages include customized skincare, haircare, and deep-nourishing beauty treatments designed to prep your canvas weeks before the big day. Experience luxury facials, spa treatments, and professional consultations to ensure a flawless glow from within.',
             features: ['Customized Skin Treatments', 'Hair Spa & Conditioning', 'Body Polishing', 'Personalized Consultation'],
-            img: import.meta.env.BASE_URL + 'assets/images/services/service-03.svg',
+            img: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1400&q=85',
+            imgAlt: 'Relaxing professional facial skincare treatment for pre-bridal skin preparation',
             link: '/contact',
             linkText: 'Inquire About Packages'
         },
@@ -40,7 +43,8 @@ export default function Services() {
             subtitle: 'Learn from the Masters',
             description: 'Step into the world of professional beauty. The Gold Crown Makeup Academy offers intensive, hands-on certification courses led by Sunita Gupta. Designed for aspiring artists, our curriculum covers everything from basic color theory to advanced bridal and editorial techniques, equipping you with the skills to launch a successful career in makeup artistry.',
             features: ['Beginner to Advanced Levels', 'Hands-on Practical Sessions', 'Business & Client Management', 'Professional Certification'],
-            img: import.meta.env.BASE_URL + 'assets/images/services/service-04.svg',
+            img: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1400&q=85',
+            imgAlt: 'Makeup brushes and professional cosmetics used for makeup artist training',
             link: '/academy',
             linkText: 'Explore the Academy'
         }
@@ -66,8 +70,8 @@ export default function Services() {
                     {services.map((service, index) => (
                         <div key={service.id} className={'editorial-grid ' + (index % 2 !== 0 ? 'reverse' : '')} style={{ marginBottom: index !== services.length - 1 ? '8rem' : '0' }}>
                             <FadeUp delay={100}>
-                                <div className="img-wrapper img-landscape border-delicate">
-                                    <img src={service.img} alt={service.title} />
+                                <div className="img-wrapper img-landscape border-delicate services-photo-frame">
+                                    <img src={service.img} alt={service.imgAlt} loading="lazy" decoding="async" />
                                 </div>
                             </FadeUp>
                             <div style={{ padding: '0 5%' }}>
