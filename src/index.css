@@ -629,7 +629,11 @@ img, svg {
 /* ─── Hero Section ───────────────────────────── */
 .hero-editorial {
     position: relative;
-    min-height: clamp(560px, 70vh, 680px);
+    /* Header is fixed and occupies about 180px before scrolling. Reserve that space
+       so the hero copy starts below the navigation instead of behind it. */
+    min-height: calc(clamp(560px, 70vh, 680px) + 182px);
+    padding-top: 182px;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -1574,7 +1578,8 @@ img, svg {
     }
 
     .hero-editorial {
-        min-height: 620px;
+        min-height: calc(620px + 150px);
+        padding-top: 150px;
     }
 
     .hero-content {
