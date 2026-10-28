@@ -4437,3 +4437,20 @@ img, svg {
     .curriculum-highlights { margin-top: 0.25rem; }
     .curriculum-highlights li { min-height: 3.5rem; }
 }
+
+
+/* Academy mentorship image: preserve the complete original artwork */
+.academy-mentorship-image {
+    aspect-ratio: auto;
+    height: auto;
+    overflow: visible;
+    background: #f2eae4;
+}
+.academy-mentorship-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+}
