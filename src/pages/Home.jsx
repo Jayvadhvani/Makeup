@@ -74,6 +74,8 @@ export default function Home() {
                                 width: '100%',
                                 height: '100%',
                                 objectFit: 'cover',
+                                // Keep the bridal face and jewellery in frame after reducing the hero height.
+                                objectPosition: index === 0 ? 'center 34%' : 'center 24%',
                                 opacity: index === heroIndex ? 1 : 0,
                                 transition: 'opacity 1.5s ease-in-out'
                             }}
