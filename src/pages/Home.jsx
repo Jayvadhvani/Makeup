@@ -13,6 +13,7 @@ export default function Home() {
         { name: "Simran Kapoor", text: "I absolutely loved my party makeup! The look was glamorous but still felt like me. The team was warm, professional and very attentive." }
     ];
     const [reviewIndex, setReviewIndex] = useState(0);
+    const [openFaq, setOpenFaq] = useState(0);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
     useEffect(() => {
@@ -308,6 +309,126 @@ export default function Home() {
                         <FadeUp>
                             <Link to="/testimonials" className="btn">Read All Reviews</Link>
                         </FadeUp>
+                    </div>
+                </div>
+            </section>
+
+            {/* LATEST BEAUTY JOURNAL */}
+            <section className="section bg-white">
+                <div className="container">
+                    <FadeUp>
+                        <div className="journal-heading">
+                            <div>
+                                <h4 className="text-meta" style={{ marginBottom: '1rem' }}>From the Beauty Journal</h4>
+                                <h2 className="heading-xl">Bridal Beauty <i className="italic">Insights</i></h2>
+                                <p className="text-secondary journal-intro">Thoughtful tips to help you plan your look, care for your skin, and feel confident on your special day.</p>
+                            </div>
+                            <Link to="/blog" className="btn journal-all-link">Explore All Articles</Link>
+                        </div>
+                    </FadeUp>
+                    <div className="journal-grid">
+                        <FadeUp delay={0}>
+                            <article className="journal-card">
+                                <Link to="/blog#bridal-makeup-timeline" className="journal-image-link" aria-label="Read: How to Plan Your Bridal Makeup Timeline">
+                                    <img src="https://images.pexels.com/photos/10954282/pexels-photo-10954282.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Indian bride wearing traditional bridal jewelry and makeup" loading="lazy" />
+                                    <span className="journal-category">Bridal Planning</span>
+                                </Link>
+                                <div className="journal-card-body">
+                                    <p className="journal-meta">5 minute read</p>
+                                    <h3>How to Plan Your Bridal Makeup Timeline</h3>
+                                    <p>From the first consultation to the final touch-up, a calm schedule helps your wedding morning feel more effortless.</p>
+                                    <Link to="/blog#bridal-makeup-timeline" className="journal-read-link">Read article <span aria-hidden="true">→</span></Link>
+                                </div>
+                            </article>
+                        </FadeUp>
+                        <FadeUp delay={100}>
+                            <article className="journal-card">
+                                <Link to="/blog#skin-prep-before-wedding" className="journal-image-link" aria-label="Read: Simple Skin Prep Before Your Wedding">
+                                    <img src="https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Skincare products arranged for a simple beauty routine" loading="lazy" />
+                                    <span className="journal-category">Skin Preparation</span>
+                                </Link>
+                                <div className="journal-card-body">
+                                    <p className="journal-meta">4 minute read</p>
+                                    <h3>Simple Skin Prep Before Your Wedding</h3>
+                                    <p>Build a gentle, consistent routine and know what to avoid close to your event to help makeup sit comfortably.</p>
+                                    <Link to="/blog#skin-prep-before-wedding" className="journal-read-link">Read article <span aria-hidden="true">→</span></Link>
+                                </div>
+                            </article>
+                        </FadeUp>
+                        <FadeUp delay={200}>
+                            <article className="journal-card">
+                                <Link to="/blog#choose-bridal-makeup-look" className="journal-image-link" aria-label="Read: Choosing a Bridal Makeup Look That Feels Like You">
+                                    <img src="https://images.pexels.com/photos/3992656/pexels-photo-3992656.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Makeup artist preparing a client for a beauty look" loading="lazy" />
+                                    <span className="journal-category">Makeup Inspiration</span>
+                                </Link>
+                                <div className="journal-card-body">
+                                    <p className="journal-meta">4 minute read</p>
+                                    <h3>Choose a Bridal Makeup Look That Feels Like You</h3>
+                                    <p>Use your outfit, ceremony, comfort, and personal style to guide a look that feels polished and authentically yours.</p>
+                                    <Link to="/blog#choose-bridal-makeup-look" className="journal-read-link">Read article <span aria-hidden="true">→</span></Link>
+                                </div>
+                            </article>
+                        </FadeUp>
+                    </div>
+                </div>
+            </section>
+
+            {/* FREQUENTLY ASKED QUESTIONS */}
+            <section className="section bg-secondary">
+                <div className="container faq-layout">
+                    <FadeUp>
+                        <div className="faq-intro">
+                            <h4 className="text-meta" style={{ marginBottom: '1rem' }}>A Little Clarity</h4>
+                            <h2 className="heading-xl">Frequently Asked <i className="italic">Questions</i></h2>
+                            <p className="text-secondary">Planning a bridal look should feel exciting, not overwhelming. Here are answers to a few common questions.</p>
+                            <Link to="/contact" className="btn-solid" style={{ marginTop: '2rem' }}>Ask Us Directly</Link>
+                        </div>
+                    </FadeUp>
+                    <div className="faq-list">
+                        {[
+                            {
+                                question: 'How do I book a bridal makeup appointment?',
+                                answer: 'Contact Gold Crown Makeup Studio through the booking form, phone, or WhatsApp. Share your event date, function, venue, and the services you are interested in so the team can discuss availability and the next steps.'
+                            },
+                            {
+                                question: 'When should I enquire about my wedding date?',
+                                answer: 'It is a good idea to enquire as early as you can, especially for popular wedding dates and peak seasons. Availability varies by date, so please contact the studio to confirm your event.'
+                            },
+                            {
+                                question: 'Can my makeup look be customized to my outfit and personal style?',
+                                answer: 'Yes. Your preferred finish, outfit colours, jewellery, event setting, and comfort are useful starting points for a personalized consultation. Bring reference images if you have them, and discuss what feels most like you.'
+                            },
+                            {
+                                question: 'Do you offer makeup for engagements, receptions, and other occasions?',
+                                answer: 'Gold Crown Makeup Studio offers bridal and occasion makeup services. Contact the studio with your event details to discuss the most suitable option and availability.'
+                            },
+                            {
+                                question: 'How should I prepare my skin before my makeup appointment?',
+                                answer: 'Keep your routine gentle and familiar, moisturize as usual, and avoid trying new strong skincare products immediately before your event. If you have a skin concern, consult a qualified dermatologist well ahead of the date.'
+                            },
+                            {
+                                question: 'Does the studio also provide makeup training?',
+                                answer: 'The website includes a Makeup Academy section. Contact the studio to ask about current courses, training formats, schedules, and enrolment details.'
+                            }
+                        ].map((item, index) => (
+                            <div className={'faq-item' + (openFaq === index ? ' faq-item-open' : '')} key={item.question}>
+                                <h3 className="faq-question-heading">
+                                    <button
+                                        className="faq-question"
+                                        type="button"
+                                        aria-expanded={openFaq === index}
+                                        aria-controls={'home-faq-answer-' + index}
+                                        onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                                    >
+                                        <span>{item.question}</span>
+                                        <span className="faq-toggle" aria-hidden="true">{openFaq === index ? '−' : '+'}</span>
+                                    </button>
+                                </h3>
+                                <div id={'home-faq-answer-' + index} className="faq-answer" hidden={openFaq !== index}>
+                                    <p>{item.answer}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
