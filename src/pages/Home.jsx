@@ -248,51 +248,68 @@ export default function Home() {
             </section>
 
             {/* FEATURED SERVICES */}
-            <section className="section bg-secondary">
-                <div className="container">
+            <section className="curated-services-section" aria-labelledby="curated-services-title">
+                <div className="curated-services-script" aria-hidden="true">Our Services</div>
+                <div className="curated-services-ornament curated-services-ornament-left" aria-hidden="true">❧</div>
+                <div className="curated-services-ornament curated-services-ornament-right" aria-hidden="true">✿</div>
+                <div className="container curated-services-container">
                     <FadeUp>
-                        <div className="text-center" style={{ marginBottom: '4rem' }}>
-                            <h4 className="text-meta" style={{ marginBottom: '1rem' }}>Our Expertise</h4>
-                            <h2 className="heading-xl">Curated <i className="italic">Services</i></h2>
-                        </div>
+                        <header className="curated-services-heading">
+                            <p className="curated-services-eyebrow"><span></span> Our Expertise <span></span></p>
+                            <h2 id="curated-services-title">Curated <em>Services</em></h2>
+                            <p>From bridal transformations to party glam and professional training,<br className="curated-services-desktop-break" /> we offer personalized services to bring out your most beautiful self.</p>
+                            <div className="curated-services-crown-rule" aria-hidden="true"><span></span><b>♛</b><span></span></div>
+                        </header>
                     </FadeUp>
-                    
-                    <div className="grid-3">
+                    <div className="curated-services-grid">
                         {[
                             {
                                 title: 'Bridal Makeup',
+                                description: 'Timeless bridal looks tailored to your style, enhancing your natural beauty for your special day.',
                                 img: 'https://cdn0.weddingwire.in/vendor/7838/3_2/960/jpg/file-1693904960859_15_77838-169390496068714.jpeg',
-                                alt: 'Traditional Indian bridal makeup with warm copper eyeshadow and gold jewelry',
-                                link: '/bridal'
+                                alt: 'Indian bride with traditional bridal makeup and ornate gold jewelry',
+                                link: '/bridal',
+                                icon: '♙'
                             },
                             {
                                 title: 'Party & Occasion',
+                                description: 'Stunning looks for every celebration be it receptions, parties, or special events that make you stand out.',
                                 img: 'https://pallavityagi.com/images/portfolio-party.png',
-                                alt: 'Elegant evening party makeup with smoky eyes and soft waves',
-                                link: '/services'
+                                alt: 'Elegant party makeup look for a special occasion',
+                                link: '/services',
+                                icon: '♧'
                             },
                             {
                                 title: 'Makeup Academy',
+                                description: 'Learn from industry expertise with hands-on training and professional guidance to build your career.',
                                 img: 'https://assets.lakme-academy.com/images/blogs/1771997541426-behind-the-magazine-cover-fashion-industry-careers-you-can-train-for.jpg',
-                                alt: 'Professional makeup artist applying eye makeup during a training session',
-                                link: '/academy'
+                                alt: 'Makeup artist demonstrating eye makeup techniques during training',
+                                link: '/academy',
+                                icon: '⌂'
                             }
-                        ].map((s, i) => (
-                            <FadeUp key={i} delay={i * 150}>
-                                <div className="service-block">
-                                    <div className="img-wrapper img-portrait border-delicate">
-                                        <img src={s.img} alt={s.alt} loading="lazy" />
+                        ].map((service, i) => (
+                            <FadeUp key={service.title} delay={i * 130}>
+                                <article className="curated-service-card">
+                                    <Link to={service.link} className="curated-service-image-link" aria-label={`Explore ${service.title}`}>
+                                        <div className="curated-service-image">
+                                            <img src={service.img} alt={service.alt} loading="lazy" />
+                                        </div>
+                                    </Link>
+                                    <div className="curated-service-icon" aria-hidden="true">{service.icon}</div>
+                                    <div className="curated-service-content">
+                                        <h3>{service.title}</h3>
+                                        <p>{service.description}</p>
+                                        <div className="curated-service-divider" aria-hidden="true"><span>◆</span></div>
+                                        <Link to={service.link} className="curated-service-cta">Explore <span aria-hidden="true">→</span></Link>
                                     </div>
-                                    <h3 className="heading-md" style={{ marginBottom: '0.5rem', marginTop: '1.5rem' }}>{s.title}</h3>
-                                    <Link to={s.link} className="text-meta color-burgundy">Explore &rarr;</Link>
-                                </div>
+                                </article>
                             </FadeUp>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* ORNAMENT / DIVIDER */}
+                        {/* ORNAMENT / DIVIDER */}
             <div className="container section-sm text-center">
                 <div className="line-vertical"></div>
             </div>
