@@ -815,3 +815,96 @@ img, svg {
         font-size: 0.7rem;
     }
 }
+
+
+/* ─── Bridal portfolio teaser ─────────────────── */
+.portfolio-teaser-gallery {
+    align-items: start;
+    gap: clamp(1rem, 2.2vw, 2rem);
+}
+
+.portfolio-teaser-card {
+    margin: 0;
+    isolation: isolate;
+    background: var(--bg-secondary);
+    border: 1px solid rgba(214, 197, 179, 0.7);
+    box-shadow: 0 18px 45px rgba(54, 31, 29, 0.08);
+}
+
+.portfolio-teaser-card-offset {
+    margin-top: 4rem;
+}
+
+.portfolio-teaser-card::after {
+    content: '';
+    position: absolute;
+    inset: 35% 0 0;
+    z-index: 1;
+    background: linear-gradient(180deg, transparent 0%, rgba(31, 17, 18, 0.72) 100%);
+    pointer-events: none;
+}
+
+.portfolio-teaser-card img {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 1.2s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+
+.portfolio-teaser-card:hover img {
+    transform: scale(1.045);
+}
+
+.portfolio-teaser-caption {
+    position: absolute;
+    z-index: 2;
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    color: #fff;
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio-teaser-caption span {
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.portfolio-teaser-caption strong {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 1.8vw, 1.8rem);
+    line-height: 1.1;
+    font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+    .portfolio-teaser-card-offset {
+        margin-top: 0;
+    }
+
+    .portfolio-teaser-gallery {
+        max-width: 720px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-teaser-gallery {
+        gap: 1rem;
+    }
+
+    .portfolio-teaser-card {
+        aspect-ratio: 4 / 5;
+    }
+
+    .portfolio-teaser-caption {
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+    }
+}
