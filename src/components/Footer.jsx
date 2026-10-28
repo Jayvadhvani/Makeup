@@ -44,6 +44,7 @@ export default function Footer() {
                         <li><Link to="/bridal">Bridal Portfolio</Link></li>
                         <li><Link to="/academy">Makeup Academy</Link></li>
                         <li><Link to="/testimonials">Client Reviews</Link></li>
+                        <li><Link to="/blog">Beauty Journal</Link></li>
                     </ul>
                 </div>
                 
