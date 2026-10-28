@@ -3377,21 +3377,18 @@ img, svg {
     isolation: isolate;
     overflow: hidden;
     padding: clamp(3.8rem, 6vw, 5.6rem) 0 clamp(4rem, 6vw, 6rem);
-    background:
-        radial-gradient(ellipse at 10% 53%, rgba(237, 169, 157, 0.22), transparent 28%),
-        radial-gradient(ellipse at 91% 60%, rgba(237, 169, 157, 0.2), transparent 30%),
-        linear-gradient(120deg, #fcf6f1 0%, #fffdfa 48%, #fbf2eb 100%);
+    background-color: #fff8f2;
+    background-image:
+        linear-gradient(rgba(255, 250, 245, 0.06), rgba(255, 250, 245, 0.06)),
+        url('/assets/images/curated-services-bg.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .curated-services-section::before,
 .curated-services-section::after {
-    position: absolute;
-    z-index: -1;
-    color: rgba(210, 148, 85, 0.14);
-    font-family: var(--font-heading);
-    font-size: clamp(9rem, 20vw, 19rem);
-    line-height: 1;
-    pointer-events: none;
+    display: none;
 }
 
 .curated-services-section::before {
@@ -3419,7 +3416,7 @@ img, svg {
     z-index: -1;
     top: 0.4rem;
     right: 1.5%;
-    color: rgba(184, 111, 83, 0.1);
+    color: rgba(184, 111, 83, 0.13);
     font-family: var(--font-heading);
     font-size: clamp(4rem, 10vw, 9rem);
     font-style: italic;
