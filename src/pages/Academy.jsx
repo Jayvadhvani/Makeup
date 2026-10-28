@@ -50,7 +50,7 @@ export default function Academy() {
                 <div className="container">
                     <div className="editorial-grid">
                         <FadeUp delay={100}>
-                            <div className="img-wrapper img-landscape border-delicate">
+                            <div className="img-wrapper academy-mentorship-image border-delicate">
                                 <img src="https://freelancemakeupartistinkanpursunitagupta.wordpress.com/wp-content/uploads/2024/06/the-art-of-bridal-makeup-insights-from-sunita-gupta.jpg" alt="Gold Crown Makeup Studio students celebrating their makeup artist certification with Sunita Gupta" loading="lazy" />
                             </div>
                         </FadeUp>
