@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import FadeUp from '../components/FadeUp';
 import SEO from '../components/SEO';
@@ -57,6 +58,15 @@ const articles = [
 ];
 
 export default function Blog() {
+    useEffect(() => {
+        if (!window.location.hash) return;
+        const targetId = window.location.hash.slice(1);
+        const frame = window.requestAnimationFrame(() => {
+            document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        return () => window.cancelAnimationFrame(frame);
+    }, []);
+
     return (
         <div className="blog-page">
             <SEO
