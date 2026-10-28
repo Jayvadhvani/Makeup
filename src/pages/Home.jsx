@@ -197,10 +197,18 @@ export default function Home() {
                             </div>
                             <div className="grid-2">
                                 <div className="img-wrapper img-portrait" style={{ marginTop: '4rem' }}>
-                                    <img src={import.meta.env.BASE_URL + 'assets/images/gallery/gallery-01.svg'} alt="Portfolio 1" />
+                                    <img
+                                        src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=85"
+                                        alt="Professional makeup artist creating an elegant beauty look"
+                                        loading="lazy"
+                                    />
                                 </div>
                                 <div className="img-wrapper img-portrait">
-                                    <img src={import.meta.env.BASE_URL + 'assets/images/gallery/gallery-02.svg'} alt="Portfolio 2" />
+                                    <img
+                                        src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=85"
+                                        alt="Close-up beauty portrait showcasing polished occasion makeup"
+                                        loading="lazy"
+                                    />
                                 </div>
                             </div>
                         </div>
