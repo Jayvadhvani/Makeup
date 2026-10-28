@@ -14,16 +14,38 @@ export default function Bridal() {
 
     return (
         <div style={{ paddingTop: '120px', minHeight: '100vh' }}>
-            {/* HERO SECTION */}
-            <section className="container section-sm text-center">
-                <FadeUp>
-                    <h4 className="text-meta" style={{ marginBottom: '1rem' }}>The Signature</h4>
-                    <h1 className="heading-display"><i className="italic">Bridal</i> Experience</h1>
-                    <div className="line-vertical" style={{ margin: '3rem auto' }}></div>
-                    <p className="text-lead" style={{ margin: '0 auto', maxWidth: '800px' }}>
-                        Your wedding day is a celebration of your unique love story. At Gold Crown Makeup Studio, Sunita Gupta curates flawless, luxurious bridal transformations that ensure you feel confident, radiant, and beautifully yourself.
-                    </p>
-                </FadeUp>
+            {/* IMAGE-LED BRIDAL HERO */}
+            <section className="bridal-hero">
+                <div className="container bridal-hero-grid">
+                    <FadeUp>
+                        <div className="bridal-hero-copy">
+                            <p className="text-meta bridal-hero-eyebrow"><span></span>The Signature Experience</p>
+                            <h1 className="heading-display"><i className="italic">Bridal</i><br />Beauty, Made Personal</h1>
+                            <div className="bridal-hero-flourish" aria-hidden="true"><span></span><b>◆</b><span></span></div>
+                            <p className="text-lead bridal-hero-description">
+                                Your wedding day should feel unmistakably you. Sunita Gupta creates refined, radiant bridal looks that celebrate your features, your traditions, and your story.
+                            </p>
+                            <div className="bridal-hero-actions">
+                                <Link to="/contact" className="btn-solid">Enquire About Bridal</Link>
+                                <Link to="/portfolio" className="bridal-hero-link">Explore Our Work <span aria-hidden="true">↗</span></Link>
+                            </div>
+                            <p className="bridal-hero-note">Thoughtful artistry · Timeless elegance · Personal attention</p>
+                        </div>
+                    </FadeUp>
+                    <FadeUp delay={150}>
+                        <figure className="bridal-hero-visual">
+                            <div className="bridal-hero-image-frame">
+                                <img
+                                    src="https://images.unsplash.com/photo-1742891602017-40b3a924f476?auto=format&fit=crop&w=1400&q=85"
+                                    alt="Indian bride wearing traditional bridal makeup and ornate gold jewellery"
+                                    loading="eager"
+                                    fetchPriority="high"
+                                />
+                            </div>
+                            <figcaption><span>01</span><span>Radiant by tradition. Unique by design.</span></figcaption>
+                        </figure>
+                    </FadeUp>
+                </div>
             </section>
 
             {/* THE PROCESS (Split Layout) */}
