@@ -11,6 +11,7 @@ import Pathway from './pages/Pathway';
 import Portfolio from './pages/Portfolio';
 import Testimonials from './pages/Testimonials';
 import Contact from './pages/Contact';
+import Blog from './pages/Blog';
 import StickySocials from './components/StickySocials';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
