@@ -51,7 +51,7 @@ export default function Academy() {
                     <div className="editorial-grid">
                         <FadeUp delay={100}>
                             <div className="img-wrapper img-landscape border-delicate">
-                                <img src={import.meta.env.BASE_URL + 'assets/images/services/service-04.svg'} alt="Makeup Academy Masterclass" />
+                                <img src="https://freelancemakeupartistinkanpursunitagupta.wordpress.com/wp-content/uploads/2024/06/the-art-of-bridal-makeup-insights-from-sunita-gupta.jpg" alt="Gold Crown Makeup Studio students celebrating their makeup artist certification with Sunita Gupta" loading="lazy" />
                             </div>
                         </FadeUp>
                         <div style={{ padding: '0 5%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
