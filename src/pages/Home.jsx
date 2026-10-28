@@ -389,10 +389,11 @@ export default function Home() {
             </section>
 
                         {/* LATEST BEAUTY JOURNAL */}
-            <section className="section bg-white">
-                <div className="container">
+            <section className="section bg-white journal-feature-section">
+                <div className="container journal-feature-container">
+                    <div className="journal-feature-ornament" aria-hidden="true">❧</div>
                     <FadeUp>
-                        <div className="journal-heading">
+                        <div className="journal-heading journal-feature-heading">
                             <div>
                                 <h4 className="text-meta" style={{ marginBottom: '1rem' }}>From the Beauty Journal</h4>
                                 <h2 className="heading-xl">Bridal Beauty <i className="italic">Insights</i></h2>
@@ -401,9 +402,9 @@ export default function Home() {
                             <Link to="/blog" className="btn journal-all-link">Explore All Articles</Link>
                         </div>
                     </FadeUp>
-                    <div className="journal-grid">
+                    <div className="journal-grid journal-feature-grid">
                         <FadeUp delay={0}>
-                            <article className="journal-card">
+                            <article className="journal-card journal-feature-card">
                                 <Link to="/blog#bridal-makeup-timeline" className="journal-image-link" aria-label="Read: How to Plan Your Bridal Makeup Timeline">
                                     <img src="https://images.pexels.com/photos/10954282/pexels-photo-10954282.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Indian bride wearing traditional bridal jewelry and makeup" loading="lazy" />
                                     <span className="journal-category">Bridal Planning</span>
@@ -433,7 +434,7 @@ export default function Home() {
                         <FadeUp delay={200}>
                             <article className="journal-card">
                                 <Link to="/blog#choose-bridal-makeup-look" className="journal-image-link" aria-label="Read: Choosing a Bridal Makeup Look That Feels Like You">
-                                    <img src="https://images.pexels.com/photos/3992656/pexels-photo-3992656.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Makeup artist preparing a client for a beauty look" loading="lazy" />
+                                    <img src="https://images.pexels.com/photos/247287/pexels-photo-247287.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Makeup artist preparing a client for a beauty look" loading="lazy" />
                                     <span className="journal-category">Makeup Inspiration</span>
                                 </Link>
                                 <div className="journal-card-body">
