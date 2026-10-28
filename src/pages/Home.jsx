@@ -213,6 +213,32 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* FOUNDER VIDEO */}
+            <section className="founder-video-section" aria-labelledby="founder-video-title">
+                <div className="container founder-video-container">
+                    <FadeUp>
+                        <div className="founder-video-heading">
+                            <p className="text-meta">A Closer Look</p>
+                            <h2 id="founder-video-title" className="heading-xl">Discover the <i className="italic">Gold Crown Experience</i></h2>
+                            <p>Step into our world of beauty, artistry, and the details that make every special look memorable.</p>
+                        </div>
+                        <div className="founder-video-frame">
+                            <iframe
+                                src="https://www.youtube-nocookie.com/embed/dcDdFLR52TU"
+                                title="Gold Crown Makeup Studio video"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                            />
+                        </div>
+                        <div className="founder-video-link-wrap">
+                            <a href="https://www.youtube.com/watch?v=dcDdFLR52TU" target="_blank" rel="noreferrer" className="founder-video-link">Watch on YouTube <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </FadeUp>
+                </div>
+            </section>
+
             {/* FEATURED SERVICES */}
             <section className="section bg-secondary">
                 <div className="container">
