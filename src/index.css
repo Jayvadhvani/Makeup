@@ -3822,3 +3822,379 @@ img, svg {
         font-size: 0.84rem;
     }
 }
+
+
+/* ─── Client praise: elegant responsive testimonials ─── */
+.client-praise-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: clamp(4rem, 6.5vw, 6.5rem) 0 clamp(3.8rem, 5vw, 5rem);
+    background:
+        radial-gradient(ellipse at 0% 12%, rgba(238, 174, 160, 0.25), transparent 28%),
+        radial-gradient(ellipse at 100% 12%, rgba(238, 174, 160, 0.2), transparent 26%),
+        radial-gradient(ellipse at 0% 100%, rgba(238, 174, 160, 0.22), transparent 27%),
+        radial-gradient(ellipse at 100% 100%, rgba(238, 174, 160, 0.24), transparent 29%),
+        linear-gradient(115deg, #fcf5ef 0%, #fffdfa 50%, #fcf4ee 100%);
+}
+
+.client-praise-section::before,
+.client-praise-section::after {
+    position: absolute;
+    z-index: -1;
+    color: rgba(193, 135, 66, 0.14);
+    font-family: var(--font-heading);
+    font-size: clamp(8rem, 19vw, 17rem);
+    line-height: 1;
+    pointer-events: none;
+}
+
+.client-praise-section::before {
+    content: '❧';
+    top: -2rem;
+    left: -3rem;
+    transform: rotate(-25deg);
+}
+
+.client-praise-section::after {
+    content: '✿';
+    right: -2rem;
+    bottom: -5rem;
+    color: rgba(221, 145, 132, 0.18);
+}
+
+.client-praise-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1420px;
+}
+
+.client-praise-script {
+    position: absolute;
+    z-index: -1;
+    top: 0.4rem;
+    right: 2%;
+    color: rgba(174, 106, 83, 0.09);
+    font-family: var(--font-heading);
+    font-size: clamp(4rem, 10vw, 9rem);
+    font-style: italic;
+    line-height: 1;
+    transform: rotate(-8deg);
+    pointer-events: none;
+}
+
+.client-praise-heading {
+    max-width: 780px;
+    margin: 0 auto clamp(2rem, 3vw, 2.8rem);
+    text-align: center;
+}
+
+.client-praise-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 0 0.85rem;
+    color: #383031;
+    font-size: 0.73rem;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+
+.client-praise-eyebrow span {
+    width: clamp(38px, 7vw, 90px);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c5a059);
+}
+
+.client-praise-eyebrow span:last-child {
+    transform: rotate(180deg);
+}
+
+.client-praise-heading h2 {
+    margin: 0;
+    color: #211d1d;
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 5.7vw, 5.1rem);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+}
+
+.client-praise-heading h2 em {
+    color: #701f33;
+    font-weight: 400;
+}
+
+.client-praise-heading > p:not(.client-praise-eyebrow) {
+    margin: 1rem 0 0;
+    color: #51494a;
+    font-size: clamp(0.95rem, 1.3vw, 1.08rem);
+    line-height: 1.7;
+}
+
+.client-praise-crown,
+.client-praise-bottom-rule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: #bd873f;
+}
+
+.client-praise-crown {
+    margin-top: 0.85rem;
+}
+
+.client-praise-crown span,
+.client-praise-bottom-rule span {
+    width: 50px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c5a059);
+}
+
+.client-praise-crown span:last-child,
+.client-praise-bottom-rule span:last-child {
+    transform: rotate(180deg);
+}
+
+.client-praise-crown b,
+.client-praise-bottom-rule b {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.client-praise-carousel {
+    position: relative;
+    padding: 0 clamp(0rem, 2.7vw, 2.5rem);
+}
+
+.client-praise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: clamp(1rem, 2vw, 2rem);
+}
+
+.client-praise-card {
+    position: relative;
+    display: flex;
+    min-width: 0;
+    min-height: 340px;
+    flex-direction: column;
+    align-items: center;
+    padding: 4.1rem clamp(1.1rem, 2vw, 2rem) 1.5rem;
+    border: 1px solid rgba(197, 160, 89, 0.88);
+    border-radius: 0.85rem;
+    background: rgba(255, 253, 249, 0.88);
+    box-shadow: 0 14px 32px rgba(80, 43, 37, 0.08), inset 0 0 0 4px rgba(255, 255, 255, 0.55);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-praise-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 38px rgba(80, 43, 37, 0.13), inset 0 0 0 4px rgba(255, 255, 255, 0.55);
+}
+
+.client-praise-avatar {
+    position: absolute;
+    top: -2.25rem;
+    left: 50%;
+    display: grid;
+    place-items: center;
+    width: 92px;
+    height: 92px;
+    border: 3px solid #fffaf3;
+    border-radius: 50%;
+    outline: 1px solid #c5a059;
+    background: radial-gradient(circle at 32% 28%, #d9b27a, #8c3a48 62%, #5d1c30 100%);
+    box-shadow: 0 6px 15px rgba(83, 33, 40, 0.15);
+    color: #fffaf3;
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    transform: translateX(-50%);
+}
+
+.client-praise-quote-mark {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.2rem;
+    color: rgba(222, 150, 137, 0.25);
+    font-family: Georgia, serif;
+    font-size: 5rem;
+    line-height: 1;
+}
+
+.client-praise-stars {
+    margin-bottom: 0.85rem;
+    color: #c28b32;
+    font-size: 1.55rem;
+    letter-spacing: 0.1em;
+    line-height: 1;
+}
+
+.client-praise-review {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    margin: 0 0 1.2rem;
+    color: #383033;
+    font-size: clamp(0.9rem, 1.05vw, 1.02rem);
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.client-praise-name {
+    margin: 0;
+    color: #7a2037;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.client-praise-card-rule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    margin-top: 0.7rem;
+    color: #c08b43;
+    font-size: 0.55rem;
+}
+
+.client-praise-card-rule::before,
+.client-praise-card-rule::after {
+    content: '';
+    width: 42px;
+    height: 1px;
+    background: #c5a059;
+}
+
+.client-praise-card-rule span {
+    padding: 0 0.35rem;
+}
+
+.client-praise-arrow {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 0 0 4px;
+    border: 1px solid #c5a059;
+    border-radius: 50%;
+    background: #711d34;
+    box-shadow: 0 8px 20px rgba(91, 28, 42, 0.18);
+    color: #fffaf3;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.client-praise-arrow:hover {
+    background: #8a2943;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.client-praise-arrow-left { left: -0.1rem; }
+.client-praise-arrow-right { right: -0.1rem; }
+
+.client-praise-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+    margin-top: 1.8rem;
+}
+
+.client-praise-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    min-height: 54px;
+    padding: 0.9rem 2rem;
+    border: 1px solid #c5a059;
+    border-radius: 999px;
+    background: linear-gradient(110deg, #681a30, #801f39);
+    box-shadow: 0 9px 22px rgba(91, 28, 42, 0.19);
+    color: #fffaf3;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.client-praise-cta span {
+    color: #e7c77d;
+    font-size: 1.25rem;
+}
+
+.client-praise-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 13px 27px rgba(91, 28, 42, 0.25);
+    color: #fff;
+}
+
+.client-praise-cta:focus-visible,
+.client-praise-arrow:focus-visible {
+    outline: 2px solid #701f33;
+    outline-offset: 4px;
+}
+
+.client-praise-bottom-rule {
+    gap: 0.7rem;
+}
+
+@media (max-width: 1024px) {
+    .client-praise-carousel { padding: 0 1.7rem; }
+    .client-praise-grid { gap: 1rem; }
+    .client-praise-card { min-height: 350px; padding: 3.8rem 1rem 1.3rem; }
+    .client-praise-avatar { width: 82px; height: 82px; top: -2rem; }
+    .client-praise-review { font-size: 0.9rem; }
+    .client-praise-arrow { width: 42px; height: 42px; }
+}
+
+@media (max-width: 767px) {
+    .client-praise-section { padding: 3.8rem 0 3.5rem; }
+    .client-praise-container { width: min(100% - 2rem, 560px); }
+    .client-praise-heading { margin-bottom: 2.2rem; }
+    .client-praise-heading h2 { font-size: clamp(2.8rem, 9vw, 4rem); }
+    .client-praise-heading > p:not(.client-praise-eyebrow) { font-size: 0.94rem; }
+    .client-praise-script { top: 1.8rem; right: -2rem; font-size: 4rem; }
+    .client-praise-carousel { padding: 0 0.9rem; }
+    .client-praise-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .client-praise-card { min-height: 320px; padding: 3.8rem 1.3rem 1.4rem; }
+    .client-praise-review { max-width: 430px; font-size: 0.95rem; }
+    .client-praise-arrow { width: 38px; height: 38px; font-size: 1.7rem; }
+    .client-praise-arrow-left { left: -0.2rem; }
+    .client-praise-arrow-right { right: -0.2rem; }
+    .client-praise-footer { margin-top: 1.5rem; }
+}
+
+@media (max-width: 420px) {
+    .client-praise-section { padding: 3rem 0 3rem; }
+    .client-praise-container { width: calc(100% - 1.25rem); }
+    .client-praise-eyebrow { gap: 0.55rem; font-size: 0.62rem; letter-spacing: 0.18em; }
+    .client-praise-heading h2 { font-size: clamp(2.5rem, 11vw, 3.2rem); }
+    .client-praise-carousel { padding: 0 0.45rem; }
+    .client-praise-card { min-height: 335px; padding: 3.5rem 1rem 1.2rem; }
+    .client-praise-avatar { width: 74px; height: 74px; top: -1.8rem; font-size: 1.5rem; }
+    .client-praise-quote-mark { top: 1.2rem; left: 0.8rem; font-size: 4rem; }
+    .client-praise-stars { font-size: 1.35rem; }
+    .client-praise-review { font-size: 0.88rem; line-height: 1.75; }
+    .client-praise-name { font-size: 0.7rem; }
+    .client-praise-cta { width: min(100%, 300px); min-height: 50px; padding: 0.8rem 1.1rem; font-size: 0.65rem; }
+}
