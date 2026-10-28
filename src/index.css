@@ -4455,3 +4455,146 @@ img, svg {
     object-fit: contain;
     object-position: center;
 }
+
+
+/* Bridal page — editorial image-led hero */
+.bridal-hero {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(4rem, 8vw, 7.5rem) 0 clamp(5rem, 9vw, 8rem);
+    background:
+        radial-gradient(ellipse at 12% 15%, rgba(197, 160, 89, 0.13), transparent 32%),
+        linear-gradient(135deg, #fbf8f3 0%, #f3e8e0 100%);
+}
+.bridal-hero::before {
+    content: '❧';
+    position: absolute;
+    left: -1.5rem;
+    bottom: -5rem;
+    color: rgba(107, 42, 54, 0.055);
+    font-family: var(--font-heading);
+    font-size: clamp(15rem, 30vw, 28rem);
+    line-height: 1;
+    pointer-events: none;
+}
+.bridal-hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    gap: clamp(2.5rem, 6vw, 6rem);
+    align-items: center;
+}
+.bridal-hero-copy { max-width: 650px; padding: 1.5rem 0; }
+.bridal-hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+.bridal-hero-eyebrow span {
+    display: inline-block;
+    width: 2.5rem;
+    height: 1px;
+    background: var(--accent-gold);
+}
+.bridal-hero-copy .heading-display {
+    font-size: clamp(3.4rem, 6.3vw, 6.2rem);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+}
+.bridal-hero-copy .heading-display i { color: var(--accent-primary); }
+.bridal-hero-flourish {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    width: 9rem;
+    margin: 2rem 0 1.5rem;
+    color: var(--accent-gold);
+    font-size: 0.7rem;
+}
+.bridal-hero-flourish span { height: 1px; flex: 1; background: var(--accent-gold); }
+.bridal-hero-description { max-width: 540px; font-size: 1.02rem; line-height: 1.9; }
+.bridal-hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.bridal-hero-actions .btn-solid { padding: 1rem 1.5rem; }
+.bridal-hero-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--accent-primary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+.bridal-hero-link span { color: var(--accent-gold); font-size: 1.1rem; transition: transform 0.2s ease; }
+.bridal-hero-link:hover span { transform: translate(3px, -3px); }
+.bridal-hero-note {
+    margin-top: 2.3rem;
+    color: var(--text-secondary);
+    font-size: 0.68rem;
+    letter-spacing: 0.07em;
+    line-height: 1.8;
+    text-transform: uppercase;
+}
+.bridal-hero-visual { margin: 0; min-width: 0; }
+.bridal-hero-image-frame {
+    position: relative;
+    padding: 0.65rem;
+    border: 1px solid rgba(197, 160, 89, 0.75);
+    background: rgba(255, 255, 255, 0.48);
+    box-shadow: 0 28px 70px rgba(70, 35, 39, 0.14);
+}
+.bridal-hero-image-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0.25rem;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    pointer-events: none;
+    z-index: 1;
+}
+.bridal-hero-image-frame img {
+    display: block;
+    width: 100%;
+    height: clamp(420px, 49vw, 650px);
+    object-fit: cover;
+    object-position: center 35%;
+}
+.bridal-hero-visual figcaption {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-style: italic;
+}
+.bridal-hero-visual figcaption span:first-child {
+    color: var(--accent-gold);
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-style: normal;
+    letter-spacing: 0.12em;
+}
+@media (max-width: 900px) {
+    .bridal-hero { padding: 4rem 0 5rem; }
+    .bridal-hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .bridal-hero-copy { max-width: 720px; padding: 0; }
+    .bridal-hero-copy .heading-display { font-size: clamp(3.2rem, 10vw, 5.5rem); }
+    .bridal-hero-visual { width: min(100%, 680px); margin: 0 auto; }
+    .bridal-hero-image-frame img { height: clamp(380px, 88vw, 620px); }
+}
+@media (max-width: 520px) {
+    .bridal-hero { padding: 3rem 0 4rem; }
+    .bridal-hero-copy .heading-display { font-size: clamp(2.9rem, 13vw, 4.2rem); }
+    .bridal-hero-actions { align-items: flex-start; flex-direction: column; gap: 1.1rem; }
+    .bridal-hero-note { font-size: 0.6rem; }
+    .bridal-hero-image-frame { padding: 0.4rem; }
+    .bridal-hero-image-frame img { height: 115vw; max-height: 520px; }
+}
