@@ -2227,3 +2227,381 @@ img, svg {
         font-size: 0.94rem;
     }
 }
+
+
+/* ─── Founder Story: luxury editorial layout ───── */
+.brand-story-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: clamp(4.5rem, 7vw, 7.5rem) 0;
+    background:
+        radial-gradient(ellipse at 5% 55%, rgba(231, 153, 143, 0.13), transparent 29%),
+        radial-gradient(ellipse at 94% 12%, rgba(197, 160, 89, 0.10), transparent 25%),
+        linear-gradient(115deg, #fcf8f4 0%, #fffdfa 52%, #f8f0e9 100%);
+}
+
+.brand-story-section::before,
+.brand-story-section::after {
+    position: absolute;
+    z-index: -1;
+    color: rgba(197, 160, 89, 0.12);
+    font-family: var(--font-heading);
+    font-size: clamp(8rem, 18vw, 17rem);
+    line-height: 1;
+    pointer-events: none;
+}
+
+.brand-story-section::before {
+    content: '❧';
+    top: -2.8rem;
+    right: -1.8rem;
+    transform: rotate(-24deg);
+}
+
+.brand-story-section::after {
+    content: '❧';
+    bottom: -5.5rem;
+    left: -3rem;
+    transform: rotate(155deg);
+}
+
+.brand-story-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+    align-items: center;
+    gap: clamp(3rem, 7vw, 7.5rem);
+}
+
+.brand-story-portrait {
+    position: relative;
+    width: 100%;
+    max-width: 610px;
+    margin: 0 auto;
+    padding: 0 0.65rem 0.65rem 0;
+}
+
+.brand-story-image-frame {
+    position: relative;
+    aspect-ratio: 0.82;
+    overflow: hidden;
+    border: 1px solid rgba(197, 160, 89, 0.95);
+    border-radius: 0 28% 0 25%;
+    padding: 0.45rem;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 12px 14px 0 rgba(197, 160, 89, 0.12), 0 24px 60px rgba(75, 35, 31, 0.10);
+}
+
+.brand-story-image-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0.8rem;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.62);
+    border-radius: 0 27% 0 24%;
+    pointer-events: none;
+}
+
+.brand-story-image-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+    border-radius: 0 25% 0 22%;
+    transition: transform 0.8s ease;
+}
+
+.brand-story-portrait:hover .brand-story-image-frame img {
+    transform: scale(1.025);
+}
+
+.brand-story-image-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    max-width: calc(100% - 1.5rem);
+    padding: 0.7rem 1.1rem;
+    background: #6b2a36;
+    color: #fff9f3;
+    border: 1px solid rgba(197, 160, 89, 0.8);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.brand-story-content {
+    min-width: 0;
+    padding: 0.75rem 0;
+}
+
+.brand-story-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
+    color: #a66b2b;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+}
+
+.brand-story-eyebrow::after {
+    content: '';
+    display: block;
+    width: clamp(50px, 7vw, 110px);
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent-gold), rgba(197, 160, 89, 0.1));
+}
+
+.brand-story-title {
+    margin: 0;
+    font-size: clamp(3rem, 5.5vw, 5.6rem);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+    font-weight: 300;
+}
+
+.brand-story-title span {
+    display: block;
+    color: var(--accent-primary);
+    font-weight: 400;
+}
+
+.brand-story-rule {
+    width: 88px;
+    height: 3px;
+    margin: 1.5rem 0 1.7rem;
+    background: linear-gradient(90deg, #a66b2b, #e1bd72);
+    position: relative;
+}
+
+.brand-story-rule span {
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    width: 9px;
+    height: 9px;
+    transform: translateY(-50%) rotate(45deg);
+    background: #d6ad63;
+}
+
+.brand-story-lead,
+.brand-story-description {
+    max-width: 720px;
+    color: #554b48;
+    font-size: clamp(1rem, 1.15vw, 1.12rem);
+    line-height: 1.9;
+}
+
+.brand-story-lead {
+    margin-bottom: 1.15rem;
+}
+
+.brand-story-lead strong {
+    color: #292222;
+    font-weight: 600;
+}
+
+.brand-story-description {
+    margin-bottom: 1.6rem;
+}
+
+.brand-story-values {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin: 0 0 2rem;
+}
+
+.brand-story-value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.65rem;
+    padding: 0 0.7rem;
+    color: #453c3b;
+    font-size: 0.82rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.brand-story-value + .brand-story-value {
+    border-left: 1px solid rgba(107, 42, 54, 0.12);
+}
+
+.brand-story-value-icon {
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgba(231, 153, 143, 0.14);
+    color: var(--accent-primary);
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    line-height: 1;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.brand-story-value:hover .brand-story-value-icon {
+    background: rgba(197, 160, 89, 0.22);
+    transform: translateY(-3px);
+}
+
+.brand-story-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    min-height: 62px;
+    padding: 1rem 2.4rem;
+    border: 1px solid #c5a059;
+    border-radius: 999px;
+    background: linear-gradient(110deg, #5d1928, #751f32);
+    box-shadow: 0 12px 28px rgba(91, 28, 42, 0.16);
+    color: #fff9f3;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.brand-story-cta span {
+    color: #e7c77d;
+    font-size: 1.4rem;
+    line-height: 1;
+    transition: transform 0.25s ease;
+}
+
+.brand-story-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 34px rgba(91, 28, 42, 0.22);
+    color: #fff;
+    background: linear-gradient(110deg, #4d1522, #641a2a);
+}
+
+.brand-story-cta:hover span {
+    transform: translateX(4px);
+}
+
+.brand-story-cta:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 4px;
+}
+
+@media (max-width: 1024px) {
+    .brand-story-grid {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: 2.75rem;
+    }
+
+    .brand-story-title {
+        font-size: clamp(3rem, 5.4vw, 4.4rem);
+    }
+
+    .brand-story-values {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 1.1rem;
+    }
+
+    .brand-story-value {
+        padding: 0.3rem 0.5rem;
+    }
+
+    .brand-story-value:nth-child(3) {
+        border-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .brand-story-section {
+        padding: 4rem 0 4.5rem;
+    }
+
+    .brand-story-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.75rem;
+    }
+
+    .brand-story-portrait {
+        width: min(100%, 500px);
+        padding-right: 0.5rem;
+    }
+
+    .brand-story-image-frame {
+        aspect-ratio: 0.95;
+        border-radius: 0 22% 0 20%;
+    }
+
+    .brand-story-image-frame img {
+        border-radius: 0 20% 0 18%;
+        object-position: center 30%;
+    }
+
+    .brand-story-content {
+        padding: 0;
+    }
+
+    .brand-story-title {
+        font-size: clamp(3.2rem, 11vw, 4.6rem);
+    }
+
+    .brand-story-lead,
+    .brand-story-description {
+        font-size: 1rem;
+        line-height: 1.85;
+    }
+
+    .brand-story-values {
+        margin-top: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .brand-story-value {
+        font-size: 0.84rem;
+    }
+
+    .brand-story-cta {
+        min-height: 58px;
+        width: 100%;
+        padding: 1rem 1.3rem;
+        gap: 1rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+    }
+}
+
+@media (max-width: 420px) {
+    .brand-story-section {
+        padding: 3.25rem 0 3.75rem;
+    }
+
+    .brand-story-grid {
+        gap: 2.1rem;
+    }
+
+    .brand-story-eyebrow {
+        font-size: 0.68rem;
+        letter-spacing: 0.13em;
+        gap: 0.7rem;
+    }
+
+    .brand-story-title {
+        font-size: clamp(2.8rem, 12vw, 3.5rem);
+    }
+
+    .brand-story-value-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.7rem;
+    }
+
+    .brand-story-value {
+        font-size: 0.76rem;
+        padding: 0.2rem 0.35rem;
+    }
+}
