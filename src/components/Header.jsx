@@ -53,7 +53,6 @@ export default function Header() {
                         <Link to="/bridal" className={isActive('/bridal')}>Bridal</Link>
                         <Link to="/academy" className={isActive('/academy')}>Academy</Link>
                         <Link to="/portfolio" className={isActive('/portfolio')}>Portfolio</Link>
-                    <Link to="/blog" className={isActive('/blog')}>Blog</Link>
                         <Link to="/blog" className={isActive('/blog')}>Blog</Link>
                         <Link to="/contact" className="btn-solid" style={{ padding: '0.8rem 1.5rem' }}>Book Now</Link>
                     </nav>
@@ -81,6 +80,7 @@ export default function Header() {
                     <Link to="/bridal" className={isActive('/bridal')}>Bridal</Link>
                     <Link to="/academy" className={isActive('/academy')}>Academy</Link>
                     <Link to="/portfolio" className={isActive('/portfolio')}>Portfolio</Link>
+                    <Link to="/blog" className={isActive('/blog')}>Blog</Link>
                     <Link to="/testimonials" className={isActive('/testimonials')}>Testimonials</Link>
                     <Link to="/contact" className="btn-solid mobile-book-btn">Book Now</Link>
                 </div>
