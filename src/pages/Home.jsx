@@ -354,42 +354,41 @@ export default function Home() {
             </section>
 
             {/* TESTIMONIALS TEASER */}
-            <section className="section bg-secondary">
-                <div className="container">
+            <section className="client-praise-section" aria-labelledby="client-praise-title">
+                <div className="client-praise-script" aria-hidden="true">Client Love</div>
+                <div className="container client-praise-container">
                     <FadeUp>
-                        <div className="text-center" style={{ marginBottom: '4rem' }}>
-                            <h4 className="text-meta" style={{ marginBottom: '1rem' }}>Client Love</h4>
-                            <h2 className="heading-xl">Words of <i className="italic">Praise</i></h2>
-                        </div>
+                        <header className="client-praise-heading">
+                            <p className="client-praise-eyebrow"><span></span> Client Love <span></span></p>
+                            <h2 id="client-praise-title">Words of <em>Praise</em></h2>
+                            <p>Real stories. Real transformations. Real happiness.</p>
+                            <div className="client-praise-crown" aria-hidden="true"><span></span><b>♛</b><span></span></div>
+                        </header>
                     </FadeUp>
-                    
-                    <div className="testimonials-wrapper">
-                        <button onClick={prevReviews} aria-label="Previous Reviews" className="testimonial-arrow testimonial-arrow-left">&#10094;</button>
-
-                        <div className="testimonials-grid" style={{ gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)' }}>
+                    <div className="client-praise-carousel">
+                        <button onClick={prevReviews} aria-label="Previous reviews" className="client-praise-arrow client-praise-arrow-left">‹</button>
+                        <div className="client-praise-grid">
                             {reviews.slice(reviewIndex, reviewIndex + cardsToShow).map((review, i) => (
-                                <div key={reviewIndex + '-' + i} className="testimonial-card">
-                                    <div style={{ color: 'var(--accent-gold)', fontSize: '1.2rem', marginBottom: '1rem' }}>★★★★★</div>
-                                    <p className="text-secondary" style={{ fontStyle: 'italic', flexGrow: 1, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
-                                        "{review.text}"
-                                    </p>
-                                    <h4 className="text-meta color-burgundy">— {review.name}</h4>
-                                </div>
+                                <article key={reviewIndex + '-' + i} className="client-praise-card">
+                                    <div className="client-praise-avatar" aria-hidden="true">{review.name.split(' ').map(part => part[0]).slice(0, 2).join('')}</div>
+                                    <div className="client-praise-quote-mark" aria-hidden="true">“</div>
+                                    <div className="client-praise-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    <p className="client-praise-review">“{review.text}”</p>
+                                    <h3 className="client-praise-name">{review.name}</h3>
+                                    <div className="client-praise-card-rule" aria-hidden="true"><span>◆</span></div>
+                                </article>
                             ))}
                         </div>
-
-                        <button onClick={nextReviews} aria-label="Next Reviews" className="testimonial-arrow testimonial-arrow-right">&#10095;</button>
+                        <button onClick={nextReviews} aria-label="Next reviews" className="client-praise-arrow client-praise-arrow-right">›</button>
                     </div>
-                    
-                    <div className="text-center">
-                        <FadeUp>
-                            <Link to="/testimonials" className="btn">Read All Reviews</Link>
-                        </FadeUp>
+                    <div className="client-praise-footer">
+                        <Link to="/testimonials" className="client-praise-cta">Read All Reviews <span aria-hidden="true">→</span></Link>
+                        <div className="client-praise-bottom-rule" aria-hidden="true"><span></span><b>♛</b><span></span></div>
                     </div>
                 </div>
             </section>
 
-            {/* LATEST BEAUTY JOURNAL */}
+                        {/* LATEST BEAUTY JOURNAL */}
             <section className="section bg-white">
                 <div className="container">
                     <FadeUp>
