@@ -215,25 +215,33 @@ export default function Home() {
 
             {/* FOUNDER VIDEO */}
             <section className="founder-video-section" aria-labelledby="founder-video-title">
+                <div className="founder-video-script" aria-hidden="true">Gold Crown</div>
+                <div className="founder-video-floral founder-video-floral-top" aria-hidden="true">❧</div>
+                <div className="founder-video-floral founder-video-floral-bottom" aria-hidden="true">✿</div>
                 <div className="container founder-video-container">
                     <FadeUp>
-                        <div className="founder-video-heading">
-                            <p className="text-meta">A Closer Look</p>
-                            <h2 id="founder-video-title" className="heading-xl">Discover the <i className="italic">Gold Crown Experience</i></h2>
+                        <header className="founder-video-heading">
+                            <p className="founder-video-eyebrow"><span aria-hidden="true">•</span> A Closer Look <span aria-hidden="true">•</span></p>
+                            <h2 id="founder-video-title">Discover the <em>Gold Crown</em><br className="founder-video-title-break" /> Experience</h2>
+                            <div className="founder-video-crown-rule" aria-hidden="true"><span></span><b>♛</b><span></span></div>
                             <p>Step into our world of beauty, artistry, and the details that make every special look memorable.</p>
-                        </div>
-                        <div className="founder-video-frame">
-                            <iframe
-                                src="https://www.youtube-nocookie.com/embed/dcDdFLR52TU"
-                                title="Gold Crown Makeup Studio video"
-                                loading="lazy"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                allowFullScreen
-                            />
+                        </header>
+                        <div className="founder-video-frame-wrap">
+                            <div className="founder-video-frame">
+                                <iframe
+                                    src="https://www.youtube-nocookie.com/embed/dcDdFLR52TU"
+                                    title="Visit Sunita Gupta's Gold Crown Makeup Studio"
+                                    loading="lazy"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                />
+                            </div>
                         </div>
                         <div className="founder-video-link-wrap">
-                            <a href="https://www.youtube.com/watch?v=dcDdFLR52TU" target="_blank" rel="noreferrer" className="founder-video-link">Watch on YouTube <span aria-hidden="true">↗</span></a>
+                            <span className="founder-video-link-rule" aria-hidden="true"></span>
+                            <a href="https://www.youtube.com/watch?v=dcDdFLR52TU" target="_blank" rel="noreferrer" className="founder-video-link"><span className="founder-video-play-icon" aria-hidden="true">▷</span> Watch on YouTube <span className="founder-video-link-arrow" aria-hidden="true">→</span></a>
+                            <span className="founder-video-link-rule" aria-hidden="true"></span>
                         </div>
                     </FadeUp>
                 </div>
