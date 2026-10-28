@@ -4439,17 +4439,18 @@ img, svg {
 }
 
 
-/* Academy mentorship image: preserve the complete original artwork */
+/* Academy mentorship image: keep the square artwork square at every screen size */
 .academy-mentorship-image {
-    aspect-ratio: auto;
+    aspect-ratio: 1 / 1;
     height: auto;
-    overflow: visible;
+    min-height: 0;
+    overflow: hidden;
     background: #f2eae4;
 }
 .academy-mentorship-image img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     max-height: none;
     object-fit: contain;
     object-position: center;
