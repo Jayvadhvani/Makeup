@@ -3379,9 +3379,12 @@ img, svg {
     padding: clamp(3.8rem, 6vw, 5.6rem) 0 clamp(4rem, 6vw, 6rem);
     background-color: #fff8f2;
     background-image:
-        linear-gradient(rgba(255, 250, 245, 0.06), rgba(255, 250, 245, 0.06)),
-        url('/assets/images/curated-services-bg.webp');
-    background-position: center center;
+        radial-gradient(ellipse at 0% 12%, rgba(239, 172, 158, 0.24), transparent 24%),
+        radial-gradient(ellipse at 100% 12%, rgba(239, 172, 158, 0.2), transparent 24%),
+        radial-gradient(ellipse at 0% 100%, rgba(239, 172, 158, 0.2), transparent 27%),
+        radial-gradient(ellipse at 100% 100%, rgba(239, 172, 158, 0.23), transparent 28%),
+        linear-gradient(110deg, #fcf5ef 0%, #fffdfa 48%, #fcf4ed 100%);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
