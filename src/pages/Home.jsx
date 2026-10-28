@@ -181,13 +181,29 @@ export default function Home() {
                                 </p>
                                 <Link to="/portfolio" className="btn">View Portfolio</Link>
                             </div>
-                            <div className="grid-2">
-                                <div className="img-wrapper img-portrait" style={{ marginTop: '4rem' }}>
-                                    <img src={import.meta.env.BASE_URL + 'assets/images/gallery/gallery-01.svg'} alt="Portfolio 1" />
-                                </div>
-                                <div className="img-wrapper img-portrait">
-                                    <img src={import.meta.env.BASE_URL + 'assets/images/gallery/gallery-02.svg'} alt="Portfolio 2" />
-                                </div>
+                            <div className="grid-2 portfolio-teaser-gallery">
+                                <figure className="img-wrapper img-portrait portfolio-teaser-card portfolio-teaser-card-offset">
+                                    <img
+                                        src={import.meta.env.BASE_URL + 'assets/images/banner1.jpg'}
+                                        alt="Bridal makeup look from Gold Crown Makeup Studio"
+                                        loading="lazy"
+                                    />
+                                    <figcaption className="portfolio-teaser-caption">
+                                        <span>01</span>
+                                        <strong>The Bridal Edit</strong>
+                                    </figcaption>
+                                </figure>
+                                <figure className="img-wrapper img-portrait portfolio-teaser-card">
+                                    <img
+                                        src={import.meta.env.BASE_URL + 'assets/images/Banner-2.jpg'}
+                                        alt="Elegant occasion makeup inspiration from Gold Crown Makeup Studio"
+                                        loading="lazy"
+                                    />
+                                    <figcaption className="portfolio-teaser-caption">
+                                        <span>02</span>
+                                        <strong>Modern Romance</strong>
+                                    </figcaption>
+                                </figure>
                             </div>
                         </div>
                     </FadeUp>
