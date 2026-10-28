@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import FadeUp from '../components/FadeUp';
@@ -145,14 +144,29 @@ export default function Home() {
                     
                     <div className="grid-3">
                         {[
-                            { title: 'Bridal Makeup', img: import.meta.env.BASE_URL + 'assets/images/services/service-01.svg', link: '/bridal' },
-                            { title: 'Party & Occasion', img: import.meta.env.BASE_URL + 'assets/images/services/service-02.svg', link: '/services' },
-                            { title: 'Makeup Academy', img: import.meta.env.BASE_URL + 'assets/images/services/service-03.svg', link: '/academy' }
+                            {
+                                title: 'Bridal Makeup',
+                                img: 'https://cdn0.weddingwire.in/vendor/7838/3_2/960/jpg/file-1693904960859_15_77838-169390496068714.jpeg',
+                                alt: 'Traditional Indian bridal makeup with warm copper eyeshadow and gold jewelry',
+                                link: '/bridal'
+                            },
+                            {
+                                title: 'Party & Occasion',
+                                img: 'https://pallavityagi.com/images/portfolio-party.png',
+                                alt: 'Elegant evening party makeup with smoky eyes and soft waves',
+                                link: '/services'
+                            },
+                            {
+                                title: 'Makeup Academy',
+                                img: 'https://assets.lakme-academy.com/images/blogs/1771997541426-behind-the-magazine-cover-fashion-industry-careers-you-can-train-for.jpg',
+                                alt: 'Professional makeup artist applying eye makeup during a training session',
+                                link: '/academy'
+                            }
                         ].map((s, i) => (
                             <FadeUp key={i} delay={i * 150}>
                                 <div className="service-block">
                                     <div className="img-wrapper img-portrait border-delicate">
-                                        <img src={s.img} alt={s.title} />
+                                        <img src={s.img} alt={s.alt} loading="lazy" />
                                     </div>
                                     <h3 className="heading-md" style={{ marginBottom: '0.5rem', marginTop: '1.5rem' }}>{s.title}</h3>
                                     <Link to={s.link} className="text-meta color-burgundy">Explore &rarr;</Link>
