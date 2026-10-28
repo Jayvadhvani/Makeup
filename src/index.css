@@ -629,7 +629,7 @@ img, svg {
 /* ─── Hero Section ───────────────────────────── */
 .hero-editorial {
     position: relative;
-    min-height: clamp(520px, 72vh, 660px);
+    min-height: clamp(560px, 70vh, 680px);
     display: flex;
     align-items: center;
     overflow: hidden;
