@@ -45,35 +45,36 @@ export default function Academy() {
                 </FadeUp>
             </section>
 
-            {/* WHY CHOOSE US (Split Layout) */}
-            <section className="section bg-secondary">
-                <div className="container">
-                    <div className="editorial-grid">
+            {/* WHY CHOOSE US — image-led editorial mentorship feature */}
+            <section className="academy-mentorship-section">
+                <div className="academy-mentorship-ornament academy-mentorship-ornament-left" aria-hidden="true">✧</div>
+                <div className="academy-mentorship-ornament academy-mentorship-ornament-right" aria-hidden="true">✧</div>
+                <div className="container academy-mentorship-container">
+                    <div className="academy-mentorship-layout">
                         <FadeUp delay={100}>
-                            <div className="img-wrapper academy-mentorship-image border-delicate">
-                                <img src="https://freelancemakeupartistinkanpursunitagupta.wordpress.com/wp-content/uploads/2024/06/the-art-of-bridal-makeup-insights-from-sunita-gupta.jpg" alt="Gold Crown Makeup Studio students celebrating their makeup artist certification with Sunita Gupta" loading="lazy" />
+                            <div className="academy-mentorship-artwork">
+                                <div className="img-wrapper academy-mentorship-image">
+                                    <img
+                                        src="https://freelancemakeupartistinkanpursunitagupta.wordpress.com/wp-content/uploads/2024/06/the-art-of-bridal-makeup-insights-from-sunita-gupta.jpg"
+                                        alt="Gold Crown Makeup Studio students celebrating their makeup artist certification with Sunita Gupta"
+                                        loading="lazy"
+                                    />
+                                </div>
                             </div>
                         </FadeUp>
-                        <div style={{ padding: '0 5%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                        <div className="academy-mentorship-copy">
                             <FadeUp delay={200}>
-                                <h4 className="text-meta color-burgundy" style={{ marginBottom: '0.5rem' }}>The Difference</h4>
-                                <h2 className="heading-lg" style={{ marginBottom: '1.5rem' }}>Hands-On Mentorship</h2>
-                                <p className="text-secondary" style={{ marginBottom: '1.5rem' }}>
+                                <div className="academy-mentorship-eyebrow"><span>The Difference</span><i aria-hidden="true"></i></div>
+                                <h2 className="academy-mentorship-title">Hands-On <em>Mentorship</em></h2>
+                                <div className="academy-mentorship-flourish" aria-hidden="true"><span></span><b>✦</b><span></span></div>
+                                <p className="academy-mentorship-description">
                                     Unlike theoretical classes, the Gold Crown Academy emphasizes intense practical training. Every technique taught by Sunita Gupta is followed by supervised hands-on practice sessions on live models.
                                 </p>
-                                <ul style={{ listStyle: 'none', marginBottom: '1.5rem' }}>
-                                    <li style={{ marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)' }}>
-                                        <span style={{ color: 'var(--accent-primary)' }}>✦</span> Small Batch Sizes for Personal Attention
-                                    </li>
-                                    <li style={{ marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)' }}>
-                                        <span style={{ color: 'var(--accent-primary)' }}>✦</span> Live Demonstrations
-                                    </li>
-                                    <li style={{ marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)' }}>
-                                        <span style={{ color: 'var(--accent-primary)' }}>✦</span> Business & Client Management Skills
-                                    </li>
-                                    <li style={{ marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)' }}>
-                                        <span style={{ color: 'var(--accent-primary)' }}>✦</span> Recognized Certification
-                                    </li>
+                                <ul className="academy-mentorship-benefits">
+                                    <li><span aria-hidden="true">✦</span><i aria-hidden="true"></i><p>Small Batch Sizes for Personal Attention</p></li>
+                                    <li><span aria-hidden="true">✦</span><i aria-hidden="true"></i><p>Live Demonstrations</p></li>
+                                    <li><span aria-hidden="true">✦</span><i aria-hidden="true"></i><p>Business &amp; Client Management Skills</p></li>
+                                    <li><span aria-hidden="true">✦</span><i aria-hidden="true"></i><p>Recognized Certification</p></li>
                                 </ul>
                             </FadeUp>
                         </div>
