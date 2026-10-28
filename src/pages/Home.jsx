@@ -108,6 +108,66 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* TRUST STRIP */}
+            <section className="trust-strip" aria-label="Gold Crown Makeup Studio highlights">
+                <div className="container">
+                    <div className="trust-strip-heading">
+                        <span className="trust-strip-eyebrow">The Gold Crown Difference</span>
+                        <span className="trust-strip-rule" aria-hidden="true"></span>
+                    </div>
+                    <div className="trust-strip-grid">
+                        <div className="trust-item">
+                            <div className="trust-icon" aria-hidden="true">
+                                <svg viewBox="0 0 48 48" fill="none">
+                                    <path d="M24 5.5 29.2 16l11.6 1.7-8.4 8.2 2 11.6L24 32l-10.4 5.5 2-11.6-8.4-8.2L18.8 16 24 5.5Z" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round"/>
+                                    <path d="m18.5 23.5 3.6 3.6 7.6-8" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </div>
+                            <div className="trust-copy">
+                                <strong>15+ Years</strong>
+                                <span>Makeup Artistry Experience</span>
+                            </div>
+                        </div>
+                        <div className="trust-item">
+                            <div className="trust-icon" aria-hidden="true">
+                                <svg viewBox="0 0 48 48" fill="none">
+                                    <path d="M24 6 28.5 15.2 38.7 16.7 31.3 24l1.8 10.3L24 29.4l-9.1 4.9L16.7 24l-7.4-7.3 10.2-1.5L24 6Z" stroke="currentColor" strokeWidth="2.1" strokeLinejoin="round"/>
+                                    <path d="M7 39c2.8-5.5 7.2-8.2 13-8.2M41 39c-2.8-5.5-7.2-8.2-13-8.2" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round"/>
+                                </svg>
+                            </div>
+                            <div className="trust-copy">
+                                <strong>Bridal & Occasion</strong>
+                                <span>Looks for Your Special Moments</span>
+                            </div>
+                        </div>
+                        <div className="trust-item">
+                            <div className="trust-icon" aria-hidden="true">
+                                <svg viewBox="0 0 48 48" fill="none">
+                                    <path d="M24 40s-15-8.7-15-21a8.5 8.5 0 0 1 15-5.5A8.5 8.5 0 0 1 39 19c0 12.3-15 21-15 21Z" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round"/>
+                                    <path d="M16 23.5h5l2.4-5.5 3.2 11 2.1-5.5H33" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </div>
+                            <div className="trust-copy">
+                                <strong>Personalized Care</strong>
+                                <span>Looks Tailored to You</span>
+                            </div>
+                        </div>
+                        <div className="trust-item">
+                            <div className="trust-icon" aria-hidden="true">
+                                <svg viewBox="0 0 48 48" fill="none">
+                                    <path d="M24 5.5 28.8 15l10.5 1.5-7.6 7.4 1.8 10.4L24 29.4l-9.5 4.9 1.8-10.4-7.6-7.4L19.2 15 24 5.5Z" stroke="currentColor" strokeWidth="2.1" strokeLinejoin="round"/>
+                                    <path d="M17.5 40h13M24 35v5" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round"/>
+                                </svg>
+                            </div>
+                            <div className="trust-copy">
+                                <strong>Studio & Academy</strong>
+                                <span>Beauty Services and Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* BRAND STORY */}
             <section className="section bg-white">
                 <div className="container editorial-grid">
