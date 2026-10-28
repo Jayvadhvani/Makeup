@@ -198,15 +198,15 @@ export default function Home() {
                             <div className="grid-2">
                                 <div className="img-wrapper img-portrait" style={{ marginTop: '4rem' }}>
                                     <img
-                                        src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=85"
-                                        alt="Professional makeup artist creating an elegant beauty look"
+                                        src="https://images.pexels.com/photos/10954282/pexels-photo-10954282.jpeg?auto=compress&cs=tinysrgb&w=900"
+                                        alt="Indian bride wearing traditional bridal jewelry and detailed wedding makeup"
                                         loading="lazy"
                                     />
                                 </div>
                                 <div className="img-wrapper img-portrait">
                                     <img
-                                        src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=85"
-                                        alt="Close-up beauty portrait showcasing polished occasion makeup"
+                                        src="https://images.pexels.com/photos/10954271/pexels-photo-10954271.jpeg?auto=compress&cs=tinysrgb&w=900"
+                                        alt="Close-up portrait of an Indian bride with ornate jewelry and vibrant bridal makeup"
                                         loading="lazy"
                                     />
                                 </div>
