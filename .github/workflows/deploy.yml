@@ -38,6 +38,14 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      # GitHub Pages is static hosting. Add an app entry point for each React Router route
+      # so direct visits and browser refreshes work without changing the app's URLs.
+      - name: Create React Router route entry points
+        run: |
+          for route in about services bridal academy pathway portfolio testimonials contact blog; do
+            mkdir -p "dist/$route"
+            cp dist/index.html "dist/$route/index.html"
+          done
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
