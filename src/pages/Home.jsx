@@ -323,7 +323,7 @@ export default function Home() {
                             {
                                 title: 'Bridal Makeup',
                                 description: 'Timeless bridal looks tailored to your style, enhancing your natural beauty for your special day.',
-                                img: 'https://cdn0.weddingwire.in/vendor/7838/3_2/960/jpg/file-1693904960859_15_77838-169390496068714.jpeg',
+                                img: 'import.meta.env.BASE_URL + 'assets/images/homepage-bridal-replacement.webp'',
                                 alt: 'Indian bride with traditional bridal makeup and ornate gold jewelry',
                                 link: '/bridal',
                                 icon: '♙'
