@@ -5448,4 +5448,73 @@ img, svg {
  .academy-contact-meta { padding:1rem; }
  .academy-endline { flex-direction:column; align-items:center; text-align:center; font-size:.5rem; }
 }
+
+/* Academy readability improvements: comfortable body text and clearer supporting labels */
+.academy-redesign .academy-eyebrow { font-size:.78rem; letter-spacing:.16em; }
+.academy-redesign .academy-hero-lead,
+.academy-redesign .academy-heading-description,
+.academy-redesign .academy-copy > p:not(.academy-mentor-role),
+.academy-redesign .academy-course-content > p:not(.academy-course-tag),
+.academy-redesign .academy-course-content li,
+.academy-redesign .academy-curriculum-card li,
+.academy-redesign .academy-curriculum-footer p,
+.academy-redesign .academy-steps p,
+.academy-redesign .academy-benefit p,
+.academy-redesign .academy-testimonial-card > p,
+.academy-redesign .academy-career-list p,
+.academy-redesign .academy-admission-steps p,
+.academy-redesign .academy-faq-answer p,
+.academy-redesign .academy-contact-grid > div:first-child > p:not(.academy-eyebrow),
+.academy-redesign .academy-contact-meta span:not(:first-child) {
+  font-size:1.02rem;
+  line-height:1.8;
+}
+.academy-redesign .academy-facts span,
+.academy-redesign .academy-disclaimer,
+.academy-redesign .academy-mentor-role,
+.academy-redesign .academy-course-tag,
+.academy-redesign .academy-course-bottom,
+.academy-redesign .academy-course-bottom a,
+.academy-redesign .academy-inline-link,
+.academy-redesign .academy-hero-link,
+.academy-redesign .academy-contact-link,
+.academy-redesign .academy-hero-note,
+.academy-redesign .academy-faq-question,
+.academy-redesign .academy-contact-meta span:first-child {
+  font-size:.82rem;
+  line-height:1.65;
+}
+.academy-redesign .academy-cta { font-size:.82rem; }
+.academy-redesign .academy-hero-caption,
+.academy-redesign .academy-hero-footer,
+.academy-redesign .academy-gallery-tile figcaption,
+.academy-redesign .academy-endline { font-size:.68rem; }
+@media (max-width:680px) {
+  .academy-redesign .academy-hero-lead,
+  .academy-redesign .academy-heading-description,
+  .academy-redesign .academy-copy > p:not(.academy-mentor-role),
+  .academy-redesign .academy-course-content > p:not(.academy-course-tag),
+  .academy-redesign .academy-course-content li,
+  .academy-redesign .academy-curriculum-card li,
+  .academy-redesign .academy-curriculum-footer p,
+  .academy-redesign .academy-steps p,
+  .academy-redesign .academy-benefit p,
+  .academy-redesign .academy-testimonial-card > p,
+  .academy-redesign .academy-career-list p,
+  .academy-redesign .academy-admission-steps p,
+  .academy-redesign .academy-faq-answer p,
+  .academy-redesign .academy-contact-grid > div:first-child > p:not(.academy-eyebrow),
+  .academy-redesign .academy-contact-meta span:not(:first-child) {
+    font-size:1rem;
+    line-height:1.8;
+  }
+  .academy-redesign .academy-facts span { font-size:.76rem; }
+  .academy-redesign .academy-disclaimer { font-size:.78rem; }
+  .academy-redesign .academy-hero-note { font-size:.78rem; }
+  .academy-redesign .academy-hero-caption,
+  .academy-redesign .academy-hero-footer,
+  .academy-redesign .academy-gallery-tile figcaption,
+  .academy-redesign .academy-endline { font-size:.65rem; }
+}
+
 @media (prefers-reduced-motion:reduce) { .academy-redesign *, .academy-redesign *::before, .academy-redesign *::after { scroll-behavior:auto !important; transition:none !important; animation:none !important; } }
