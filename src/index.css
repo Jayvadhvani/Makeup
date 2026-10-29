@@ -5079,3 +5079,149 @@ img, svg {
         transition: none;
     }
 }
+
+
+/* Editorial bridal portrait treatment for the final homepage booking CTA */
+.home-final-cta {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(3.5rem, 7vw, 6.5rem) clamp(1.25rem, 4vw, 4rem);
+    background:
+        radial-gradient(ellipse at 78% 20%, rgba(207, 170, 117, 0.16), transparent 38%),
+        linear-gradient(115deg, #fffaf5 0%, #f7eee7 58%, #fffaf6 100%);
+    text-align: left;
+}
+.home-final-cta-inner {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(280px, 0.88fr) minmax(0, 1.12fr);
+    align-items: center;
+    gap: clamp(2.5rem, 7vw, 6.5rem);
+}
+.home-final-cta-portrait {
+    position: relative;
+    width: min(100%, 430px);
+    aspect-ratio: 0.88;
+    margin: 0 auto;
+    isolation: isolate;
+}
+.home-final-cta-portrait::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: -1rem 1.1rem 1.1rem -1rem;
+    border: 1px solid rgba(178, 137, 73, 0.78);
+    border-radius: 48% 48% 8px 8px;
+}
+.home-final-cta-portrait::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 1rem -1rem -1rem 1rem;
+    background: rgba(111, 39, 53, 0.09);
+    border-radius: 48% 48% 8px 8px;
+}
+.home-final-cta-portrait img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 43%;
+    border-radius: 48% 48% 8px 8px;
+    box-shadow: 0 24px 55px rgba(58, 30, 24, 0.18);
+}
+.home-final-cta-seal {
+    position: absolute;
+    right: -1.25rem;
+    bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.12rem;
+    padding: 0.9rem 1rem;
+    color: #f4d69a;
+    background: #2c1715;
+    border: 1px solid rgba(224, 190, 121, 0.9);
+    box-shadow: 0 8px 24px rgba(36, 18, 15, 0.22);
+    font-family: Georgia, serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    line-height: 1.1;
+}
+.home-final-cta-seal span {
+    text-align: center;
+    font-size: 0.63rem;
+    letter-spacing: 0.35em;
+}
+.home-final-cta-copy {
+    max-width: 550px;
+}
+.home-final-cta-eyebrow {
+    display: block;
+    margin-bottom: 1rem;
+    color: #8b674b;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    line-height: 1.7;
+    text-transform: uppercase;
+}
+.home-final-cta-copy .heading-xl {
+    max-width: 560px;
+    margin: 0 0 1.2rem;
+    color: #352b2a;
+    font-size: clamp(2.3rem, 4vw, 4rem);
+    line-height: 1.08;
+}
+.home-final-cta-copy .text-lead {
+    max-width: 480px;
+    margin: 0 0 2rem;
+    color: #81736d;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+.home-final-cta-copy .btn-solid {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.05rem 1.8rem;
+}
+.home-final-cta-note {
+    display: block;
+    margin-top: 1.35rem;
+    color: #9b8a80;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+}
+@media (max-width: 760px) {
+    .home-final-cta {
+        padding: 3.5rem 1.25rem 4rem;
+    }
+    .home-final-cta-inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 3rem;
+    }
+    .home-final-cta-portrait {
+        width: min(78%, 330px);
+        aspect-ratio: 0.9;
+    }
+    .home-final-cta-seal {
+        right: -0.8rem;
+        bottom: 1.5rem;
+        padding: 0.75rem 0.8rem;
+        font-size: 0.68rem;
+    }
+    .home-final-cta-copy {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .home-final-cta-copy .heading-xl,
+    .home-final-cta-copy .text-lead {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .home-final-cta-eyebrow {
+        font-size: 0.65rem;
+        letter-spacing: 0.14em;
+    }
+}
