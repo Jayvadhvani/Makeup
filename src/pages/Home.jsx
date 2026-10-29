@@ -192,9 +192,9 @@ export default function Home() {
                                         label: 'Our Story'
                                     },
                                     {
-                                        src: import.meta.env.BASE_URL + 'assets/images/Banner-2.jpg',
-                                        alt: 'Gold Crown Makeup Studio beauty and artistry',
-                                        label: 'The Art of Beauty'
+                                        src: import.meta.env.BASE_URL + 'assets/images/award-slide2.webp',
+                                        alt: 'Sunita Gupta receiving an award from a presenter in a coral saree',
+                                        label: 'An Award to Remember'
                                     },
                                     {
                                         src: import.meta.env.BASE_URL + 'assets/images/award-slide3.webp',
