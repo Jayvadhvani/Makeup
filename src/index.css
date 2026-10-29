@@ -4993,3 +4993,89 @@ img, svg {
     .journal-feature-card .journal-card-body { padding: 1.25rem; }
     .journal-feature-card .journal-card-body h3 { font-size: 1.8rem; }
 }
+
+
+/* Founder story image carousel */
+.brand-story-slider {
+    isolation: isolate;
+}
+.brand-story-slider .brand-story-slide {
+    position: absolute;
+    inset: 0.45rem;
+    width: calc(100% - 0.9rem);
+    height: calc(100% - 0.9rem);
+    object-fit: cover;
+    object-position: center 35%;
+    opacity: 0;
+    transform: scale(1.025);
+    transition: opacity 700ms ease, transform 1.2s ease;
+    pointer-events: none;
+}
+.brand-story-slider .brand-story-slide-active {
+    opacity: 1;
+    transform: scale(1);
+}
+.brand-story-slider::before {
+    z-index: 2;
+}
+.brand-story-slider-arrow {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    display: grid;
+    place-items: center;
+    width: 2.35rem;
+    height: 2.35rem;
+    padding: 0 0 0.15rem;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    background: rgba(53, 25, 30, 0.68);
+    color: #fffaf4;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background 180ms ease, border-color 180ms ease;
+}
+.brand-story-slider-arrow:hover,
+.brand-story-slider-arrow:focus-visible {
+    background: #8b5b38;
+    border-color: #e4c68b;
+}
+.brand-story-slider-prev { left: 1rem; }
+.brand-story-slider-next { right: 1rem; }
+.brand-story-slider-dots {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    bottom: 1.15rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    border-radius: 999px;
+    background: rgba(35, 20, 22, 0.48);
+    transform: translateX(-50%);
+}
+.brand-story-slider-dot {
+    width: 0.48rem;
+    height: 0.48rem;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.62);
+    cursor: pointer;
+    transition: width 180ms ease, background 180ms ease;
+}
+.brand-story-slider-dot.is-active {
+    width: 1.25rem;
+    background: #e4c68b;
+}
+@media (prefers-reduced-motion: reduce) {
+    .brand-story-slider .brand-story-slide,
+    .brand-story-slider-arrow,
+    .brand-story-slider-dot {
+        transition: none;
+    }
+}
