@@ -207,7 +207,7 @@ export default function Home() {
                                         className={'brand-story-slide' + (index === storySlideIndex ? ' brand-story-slide-active' : '')}
                                         src={slide.src}
                                         alt={slide.alt}
-                                        loading={index === 0 ? 'eager' : 'lazy'}
+                                        loading="eager"
                                         aria-hidden={index !== storySlideIndex}
                                     />
                                 ))}
