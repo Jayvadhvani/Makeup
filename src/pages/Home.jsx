@@ -29,6 +29,7 @@ export default function Home() {
         import.meta.env.BASE_URL + 'assets/images/Banner-2.jpg'
     ];
     const [heroIndex, setHeroIndex] = useState(0);
+    const [storySlideIndex, setStorySlideIndex] = useState(0);
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -36,6 +37,13 @@ export default function Home() {
         }, 4000); // Change image every 4 seconds
         return () => clearInterval(timer);
     }, [heroImages.length, heroIndex]);
+
+    useEffect(() => {
+        const storyTimer = window.setInterval(() => {
+            setStorySlideIndex((current) => (current + 1) % 3);
+        }, 5000);
+        return () => window.clearInterval(storyTimer);
+    }, []);
 
     const nextHeroSlide = () => {
         setHeroIndex((prev) => (prev + 1) % heroImages.length);
@@ -176,8 +184,57 @@ export default function Home() {
                 <div className="container brand-story-grid">
                     <FadeUp>
                         <div className="brand-story-portrait">
-                            <div className="brand-story-image-frame">
-                                <img src={import.meta.env.BASE_URL + 'assets/images/sunita-gupta.jpg'} alt="Sunita Gupta, founder of Gold Crown Makeup Studio" loading="lazy" />
+                            <div className="brand-story-image-frame brand-story-slider" aria-label="Sunita Gupta story and achievements">
+                                {[
+                                    {
+                                        src: import.meta.env.BASE_URL + 'assets/images/sunita-gupta.jpg',
+                                        alt: 'Sunita Gupta, founder of Gold Crown Makeup Studio',
+                                        label: 'Our Story'
+                                    },
+                                    {
+                                        src: import.meta.env.BASE_URL + 'assets/images/Banner-2.jpg',
+                                        alt: 'Gold Crown Makeup Studio beauty and artistry',
+                                        label: 'The Art of Beauty'
+                                    },
+                                    {
+                                        src: import.meta.env.BASE_URL + 'assets/images/award-slide3.webp',
+                                        alt: 'Sunita Gupta receiving the Indo International Achievers Award',
+                                        label: 'A Moment of Recognition'
+                                    }
+                                ].map((slide, index) => (
+                                    <img
+                                        key={slide.src}
+                                        className={'brand-story-slide' + (index === storySlideIndex ? ' brand-story-slide-active' : '')}
+                                        src={slide.src}
+                                        alt={slide.alt}
+                                        loading={index === 0 ? 'eager' : 'lazy'}
+                                        aria-hidden={index !== storySlideIndex}
+                                    />
+                                ))}
+                                <button
+                                    type="button"
+                                    className="brand-story-slider-arrow brand-story-slider-prev"
+                                    onClick={() => setStorySlideIndex((current) => (current + 2) % 3)}
+                                    aria-label="Previous story image"
+                                >&#8249;</button>
+                                <button
+                                    type="button"
+                                    className="brand-story-slider-arrow brand-story-slider-next"
+                                    onClick={() => setStorySlideIndex((current) => (current + 1) % 3)}
+                                    aria-label="Next story image"
+                                >&#8250;</button>
+                                <div className="brand-story-slider-dots" aria-label="Choose story image">
+                                    {['Our Story', 'The Art of Beauty', 'A Moment of Recognition'].map((label, index) => (
+                                        <button
+                                            key={label}
+                                            type="button"
+                                            className={'brand-story-slider-dot' + (index === storySlideIndex ? ' is-active' : '')}
+                                            onClick={() => setStorySlideIndex(index)}
+                                            aria-label={'Show ' + label}
+                                            aria-current={index === storySlideIndex ? 'true' : undefined}
+                                        />
+                                    ))}
+                                </div>
                             </div>
                             <span className="brand-story-image-caption">Gold Crown Makeup Studio</span>
                         </div>
