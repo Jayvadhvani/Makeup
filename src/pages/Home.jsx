@@ -567,14 +567,28 @@ export default function Home() {
             </section>
 
             {/* FINAL CTA */}
-            <section className="section bg-white text-center">
-                <div className="container-narrow">
+            <section className="section home-final-cta">
+                <div className="home-final-cta-inner">
                     <FadeUp>
-                        <h2 className="heading-xl">Ready to Discuss Your Look?</h2>
-                        <p className="text-lead" style={{ margin: '0 auto 3rem' }}>
-                            Contact Gold Crown Makeup Studio to check availability for your event date and begin your personalized beauty journey.
-                        </p>
-                        <Link to="/contact" className="btn-solid">Book Now</Link>
+                        <div className="home-final-cta-portrait">
+                            <img
+                                src={import.meta.env.BASE_URL + 'assets/images/ready-discuss-bride.webp'}
+                                alt="Bride in a richly embroidered red bridal lehenga, styled by Gold Crown Studio"
+                                loading="eager"
+                            />
+                            <span className="home-final-cta-seal" aria-hidden="true">GOLD CROWN <span>STUDIO</span></span>
+                        </div>
+                    </FadeUp>
+                    <FadeUp delay={120}>
+                        <div className="home-final-cta-copy">
+                            <span className="home-final-cta-eyebrow">Your moment. Your beauty. Your story.</span>
+                            <h2 className="heading-xl">Ready to Discuss Your Look?</h2>
+                            <p className="text-lead">
+                                Contact Gold Crown Makeup Studio to check availability for your event date and begin your personalized beauty journey.
+                            </p>
+                            <Link to="/contact" className="btn-solid">Book Now <span aria-hidden="true">↗</span></Link>
+                            <span className="home-final-cta-note">Personalised artistry for your unforgettable day</span>
+                        </div>
                     </FadeUp>
                 </div>
             </section>
